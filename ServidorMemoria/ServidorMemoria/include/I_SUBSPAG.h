@@ -10,6 +10,7 @@
 
 #ifndef I_SUBSPAG_h
 #define I_SUBSPAG_h
+
 #ifdef M_SUBSPAG
 #define EXT2
 #else
@@ -17,7 +18,8 @@
 #endif
 
 
-#include "ESTRUTURAS.h"
+#include "E_MENSAGEM.h"
+#include "E_TABFRAMES.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -31,6 +33,6 @@
  * \param tab_frames Tabela de frames
  * \return -1 se ocorreu erro
  */
-int servicoSubstuicaoPaginas(int msg_subs_id, int msg_aloc_id, TabFrames* tab_frames);
+EXT2 int servicoSubstuicaoPaginas(int msg_subs_id, int msg_aloc_id, TabFrames* tab_frames);
 
 #endif /* I_SUBSPAG_h */

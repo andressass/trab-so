@@ -18,16 +18,22 @@
 
 
 //--------------------------------------------------------------------------------------------------
-int servicoSubstuicaoPaginas(int msg_subs_id, int msg_aloc_id, TabFrames* tab_frames){
+int servicoSubstuicaoPaginas(int msg_subs_id, int msg_aloc_id, TabFrames* tab_frames)
+{
     
     Mensagem* msg;
     
     while (1) {
         //Recebe mensagem (ou aguarda até receber)
-        if (msgrcv(msg_subs_id, msg, sizeof(msg), 0, 0) < 0) return -1;
+        
+        //P(&solic_libera_pag); //Espera solicitacao de substituicao de paginas
         
         //Executa o servico de substituicao de pagina
         
-        //Notifica conclusao ao alocador
+        
+        //V(&resp_libera_pag); //Notifica resultado ao alocador
+        //V(&mutex)
+        
+        
     }
 }

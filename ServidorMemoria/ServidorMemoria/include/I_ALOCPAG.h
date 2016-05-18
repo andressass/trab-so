@@ -10,6 +10,7 @@
 
 #ifndef I_ALOCPAG_h
 #define I_ALOCPAG_h
+
 #ifdef M_ALOCPAG
 #define EXT1
 #else
@@ -17,7 +18,8 @@
 #endif
 
 
-#include "ESTRUTURAS.h"
+#include "E_MENSAGEM.h"
+#include "E_TABFRAMES.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -31,6 +33,6 @@
  * \param tab_frames Tabela de frames
  * \return -1 se ocorreu erro
  */
-int servicoAlocacaoPaginas(int msg_aloc_id, int msg_subs_id, TabFrames* tab_frames);
+EXT1 int servicoAlocacaoPaginas(int msg_aloc_id, int msg_subs_id, TabFrames* tab_frames);
 
 #endif /* I_ALOCPAG_h */
