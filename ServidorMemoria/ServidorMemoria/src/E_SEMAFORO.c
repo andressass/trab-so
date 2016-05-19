@@ -7,12 +7,12 @@
  */
 //##################################################################################################
 
-#include "../include/I_SEMAFORO.h"
+#include "../include/E_SEMAFORO.h"
 
 #define M_SEMAFORO
 
 //--------------------------------------------------------------------------------------------------
-int inicializaSemaforo(int chave, int nsems, int valor_inicial){
+int inicializaConjSemaforo(int chave, int nsems, int valor_inicial){
     
     int semid;
     
@@ -37,7 +37,7 @@ int inicializaSemaforo(int chave, int nsems, int valor_inicial){
 
 
 //--------------------------------------------------------------------------------------------------
-int removeSemaforo(int semid){
+int removeConjSemaforo(int semid){
     return semctl(semid,0,IPC_RMID,0);
 }
 

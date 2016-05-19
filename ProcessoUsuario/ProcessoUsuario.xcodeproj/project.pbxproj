@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0417331CE552CB00766FB8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CE0417321CE552CB00766FB8 /* main.c */; };
+		44CF62C41CED2C6F0042A5D6 /* E_MENSAGEM.c in Sources */ = {isa = PBXBuildFile; fileRef = 44CF62BE1CED2C6F0042A5D6 /* E_MENSAGEM.c */; };
+		44CF62C81CED2C6F0042A5D6 /* M_PROCUSUARIO.c in Sources */ = {isa = PBXBuildFile; fileRef = 44CF62C21CED2C6F0042A5D6 /* M_PROCUSUARIO.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		44CF62B81CED2C6F0042A5D6 /* E_MENSAGEM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E_MENSAGEM.h; sourceTree = "<group>"; };
+		44CF62BE1CED2C6F0042A5D6 /* E_MENSAGEM.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = E_MENSAGEM.c; sourceTree = "<group>"; };
+		44CF62C21CED2C6F0042A5D6 /* M_PROCUSUARIO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = M_PROCUSUARIO.c; sourceTree = "<group>"; };
 		CE04172F1CE552CB00766FB8 /* ProcessoUsuario */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProcessoUsuario; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE0417321CE552CB00766FB8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44CF62B71CED2C6F0042A5D6 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				44CF62B81CED2C6F0042A5D6 /* E_MENSAGEM.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		44CF62BD1CED2C6F0042A5D6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				44CF62BE1CED2C6F0042A5D6 /* E_MENSAGEM.c */,
+				44CF62C21CED2C6F0042A5D6 /* M_PROCUSUARIO.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		CE0417261CE552CB00766FB8 = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +77,8 @@
 		CE0417311CE552CB00766FB8 /* ProcessoUsuario */ = {
 			isa = PBXGroup;
 			children = (
-				CE0417321CE552CB00766FB8 /* main.c */,
+				44CF62B71CED2C6F0042A5D6 /* include */,
+				44CF62BD1CED2C6F0042A5D6 /* src */,
 			);
 			path = ProcessoUsuario;
 			sourceTree = "<group>";
@@ -118,7 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0417331CE552CB00766FB8 /* main.c in Sources */,
+				44CF62C41CED2C6F0042A5D6 /* E_MENSAGEM.c in Sources */,
+				44CF62C81CED2C6F0042A5D6 /* M_PROCUSUARIO.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +261,7 @@
 				CE0417381CE552CB00766FB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

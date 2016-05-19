@@ -23,6 +23,17 @@
 #include <sys/ipc.h>
 #include <sys/sem.h>
 
+
+//--------------------------------------------------------------------------------------------------
+// Definicoes
+//--------------------------------------------------------------------------------------------------
+#define NSEMS 3 //!< Numero total de semaforos
+#define MUTEX 0 //!< Semaforo mutex
+#define SOLIC_LIB_PAG 1 //!< Semaforo de solicitacao de liberacao de paginas
+#define RESP_LIB_PAG 2 //!< Semaforo de confirmacao de liberacao de paginas
+
+#define KEY_SEM0 0x539880 //!< Chave para criacao do semaforo
+
 //--------------------------------------------------------------------------------------------------
 // Metodos
 //--------------------------------------------------------------------------------------------------
@@ -38,7 +49,7 @@
  * \param valor_inicial Valor inicial de cada um dos semaforos do conjunto
  * \return id semaforo, em caso de sucesso. -1, em caso de erro
  */
-EXT5 int inicializaSemaforo(int chave, int nsems, int valor_inicial);
+EXT5 int inicializaConjSemaforo(int chave, int nsems, int valor_inicial);
 
 //--------------------------------------------------------------------------------------------------
 /*!
@@ -47,7 +58,7 @@ EXT5 int inicializaSemaforo(int chave, int nsems, int valor_inicial);
  * \param semid id do conjunto de semaforos
  * \return O, em caso de sucesso. -1, em caso de erro
  */
-EXT5 int removeSemaforo(int semid);
+EXT5 int removeConjSemaforo(int semid);
 
 //--------------------------------------------------------------------------------------------------
 /*!

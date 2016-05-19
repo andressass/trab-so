@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "inicializaTabFrames:E_TABFRAMES.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "sizeof(TabFrames)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:M_SERVMEM.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "shmat(idshm, 0, 0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

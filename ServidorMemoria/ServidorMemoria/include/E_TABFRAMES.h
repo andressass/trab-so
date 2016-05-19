@@ -21,14 +21,17 @@
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
+#include <sys/time.h>
 
 //--------------------------------------------------------------------------------------------------
 // Definicoes
 //--------------------------------------------------------------------------------------------------
 
-#define NUMERO_FRAMES 10
-#define MAX_OCUPACAO 9
-#define OCUPACAO_OK 8
+#define NUMERO_FRAMES 10 //!< Numero total de frames da tabela
+#define MAX_OCUPACAO 9 //!< Numero maximo de frames que podem ocupar a sem uma liberacao
+#define OCUPACAO_OK 8 //!< Numero de frames em caso de liberacao de pafinas
+
+#define KEY_TAB0 0x398571 //!<Chave para a tabela de frames
 
 //--------------------------------------------------------------------------------------------------
 //! Estrutura de frame
@@ -37,7 +40,7 @@
  */
 typedef struct frame{
     int num_pag; //!< Numero da pagina
-    float tempo_ref; //!< Tempo de referencia da pagina
+    clock_t tempo_ref; //!< Tempo de referencia da pagina
 } Frame;
 
 
@@ -50,6 +53,7 @@ typedef struct tabelaFrames{
     Frame frames[NUMERO_FRAMES];
     int frames_ocupados;
 } TabFrames;
+
 
 //--------------------------------------------------------------------------------------------------
 // Metodos
@@ -64,7 +68,7 @@ typedef struct tabelaFrames{
  * \param tabFrames ponteiro que vai receber o endereco da tabela de paginas
  * \return id da area de memoria compartilhada
  */
-EXT4 int inicializaTabFrames(int chave, TabFrames* tabFrames);
+EXT4 int inicializaTabFrames(int chave, TabFrames** tabFrames);
 
 //--------------------------------------------------------------------------------------------------
 /*!

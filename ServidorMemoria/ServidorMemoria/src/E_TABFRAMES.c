@@ -13,25 +13,25 @@
 
 
 //--------------------------------------------------------------------------------------------------
-int inicializaTabFrames(int chave, TabFrames* tabFrames){
+int inicializaTabFrames(key_t chave, TabFrames** tabFrames){
     
     int idshm;
     
     //Criamos a area de memoria compartilhada para armazenar a tabela
-    if ((idshm = shmget(chave, sizeof(TabFrames), IPC_CREAT | 0x1FF) < 0))
-        return -1;
-    
+    idshm = shmget(chave, sizeof(TabFrames), IPC_CREAT | 0644);
+    if (idshm < 0) return -1;
+
     //Mapeamos a estrutura na memoria
-    if((tabFrames = (TabFrames*) shmat(idshm, (char*) 0, 0)) == (TabFrames*) -1)
+    if((*tabFrames = (TabFrames*)shmat(idshm, 0, 0)) == (TabFrames*) -1)
         return -1;
     
     //Inicializamos a estrutura de tabela de frames
     for (int i = 0; i < NUMERO_FRAMES; i++) {
-        tabFrames->frames[i].num_pag = -1;
-        tabFrames->frames[i].tempo_ref = -1;
+        (*tabFrames)->frames[i].num_pag = -1;
+        (*tabFrames)->frames[i].tempo_ref = -1;
     }
     
-    tabFrames->frames_ocupados = 0;
+    (*tabFrames)->frames_ocupados = 0;
     
     return idshm;
 }

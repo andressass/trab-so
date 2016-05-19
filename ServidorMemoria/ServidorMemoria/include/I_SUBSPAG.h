@@ -17,22 +17,19 @@
 #define EXT2 extern
 #endif
 
-
-#include "E_MENSAGEM.h"
 #include "E_TABFRAMES.h"
+#include "E_SEMAFORO.h"
 
 
 //--------------------------------------------------------------------------------------------------
 /*!
  * Metodo responsavel por implementar os servicos relativos ao processo de substituicao de 
- * pagina na memoria. Ele espera uma solicitacao atraves de uma fila de mensagens e executa o 
- * servico solicitado.
+ * pagina na memoria.
  *
- * \param msg_subs_id id da fila de mensagens de entrada do substiuidor de paginas
- * \param msg_aloc_id id da fila de mensagens de entrada do alocador
  * \param tab_frames Tabela de frames
+ * \param semid id do conjunto de semaforos a ser utlizado
  * \return -1 se ocorreu erro
  */
-EXT2 int servicoSubstuicaoPaginas(int msg_subs_id, int msg_aloc_id, TabFrames* tab_frames);
+EXT2 int servicoSubstuicaoPaginas(TabFrames* tab_frames, int semid);
 
 #endif /* I_SUBSPAG_h */
