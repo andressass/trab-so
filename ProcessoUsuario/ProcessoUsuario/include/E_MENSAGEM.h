@@ -11,9 +11,9 @@
 #define E_MENSAGEM_h
 
 #ifdef M_MENSAGEM
-#define EXT3
+#define EXT6
 #else
-#define EXT3 extern
+#define EXT6 extern
 #endif
 
 
@@ -55,15 +55,7 @@ typedef struct mensagem{
  *
  * \return Estrutura de mensagem inicializada
  */
-EXT3 Mensagem* inicializaMensagem();
+EXT6 Mensagem* inicializaMensagem();
 
-
-//--------------------------------------------------------------------------------------------------
-/*!
- * Metodo responsavel por remover e retornar uma estrutura de mensagem
- *
- * \return Estrutura de mensagem inicializada
- */
-EXT3 Mensagem* inicializaMensagem();
 
 #endif /* E_MENSAGEM_h */

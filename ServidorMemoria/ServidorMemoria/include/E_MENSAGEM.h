@@ -58,12 +58,4 @@ typedef struct mensagem{
 EXT3 Mensagem* inicializaMensagem();
 
 
-//--------------------------------------------------------------------------------------------------
-/*!
- * Metodo responsavel por remover e retornar uma estrutura de mensagem
- *
- * \return Estrutura de mensagem inicializada
- */
-EXT3 Mensagem* inicializaMensagem();
-
 #endif /* E_MENSAGEM_h */
