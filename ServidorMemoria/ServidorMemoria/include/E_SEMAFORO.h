@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file I_SEMAFORO.h
+/*! \file E_SEMAFORO.h
  *
  *  \brief Interface dos semaforos de Dijkstra
  *

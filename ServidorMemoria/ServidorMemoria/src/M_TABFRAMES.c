@@ -1,5 +1,5 @@
 //#################################################################################################
-/*! \file M_ALOCPAG.c
+/*! \file M_TABFRAMES.c
  *
  *  \brief Modulo de estrutura de tabela de frames
  *

@@ -1,0 +1,159 @@
+\hypertarget{_e___t_a_b_f_r_a_m_e_s_8h}{}\section{Referência do Arquivo include/\+E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.h}
+\label{_e___t_a_b_f_r_a_m_e_s_8h}\index{include/\+E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{include/\+E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+
+
+Interface de estrutura da tabela de frames.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/ipc.\+h$>$}\\*
+{\ttfamily \#include $<$sys/shm.\+h$>$}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+Gráfico de dependência de inclusões para E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e___t_a_b_f_r_a_m_e_s_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e___t_a_b_f_r_a_m_e_s_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structframe}{frame}
+\begin{DoxyCompactList}\small\item\em Estrutura de frame. \end{DoxyCompactList}\item 
+struct \hyperlink{structtabela_frames}{tabela\+Frames}
+\begin{DoxyCompactList}\small\item\em Estrutura de tabela de frames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a96842be40dbf0eab67687ef7ab7d608e}{E\+X\+T4}~extern
+\item 
+\#define \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_adebc67ff3f65237e9bfddd02e9330de8}{N\+U\+M\+E\+R\+O\+\_\+\+F\+R\+A\+M\+E\+S}~10
+\begin{DoxyCompactList}\small\item\em Numero total de frames da tabela. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_ae1ef6e06b77e373ae120480a5851090d}{M\+A\+X\+\_\+\+O\+C\+U\+P\+A\+C\+A\+O}~9
+\begin{DoxyCompactList}\small\item\em Numero maximo de frames que podem ocupar a sem uma liberacao. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_aabe4cdad19112b0537a9032ee0a337fd}{O\+C\+U\+P\+A\+C\+A\+O\+\_\+\+O\+K}~8
+\begin{DoxyCompactList}\small\item\em Numero de frames em caso de liberacao de pafinas. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_adbfa5c021c0a9621b07ab953a1fb02b9}{K\+E\+Y\+\_\+\+T\+A\+B0}~0x398571
+\begin{DoxyCompactList}\small\item\em Chave para a tabela de frames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structframe}{frame} \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_ace44f6be19bb7b3e2e0179d40ff7183b}{Frame}
+\begin{DoxyCompactList}\small\item\em Estrutura de frame. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structtabela_frames}{tabela\+Frames} \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames}
+\begin{DoxyCompactList}\small\item\em Estrutura de tabela de frames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a96842be40dbf0eab67687ef7ab7d608e}{E\+X\+T4} int \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a0d6eb6a91cd972bcb2c6825b41107718}{inicializa\+Tab\+Frames} (int chave, \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames} $\ast$$\ast$\hyperlink{_m___s_e_r_v_m_e_m_8c_afb269daed264da7a0810c7ccbd377c55}{tab\+Frames})
+\item 
+\hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a96842be40dbf0eab67687ef7ab7d608e}{E\+X\+T4} int \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a01a27fe6700baa301904d8080bde0b67}{remove\+Tab\+Frames} (int \hyperlink{_m___s_e_r_v_m_e_m_8c_ac8807d215d2ee6d9779d76aeb1147430}{shmid}, \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames} $\ast$\hyperlink{_m___s_e_r_v_m_e_m_8c_afb269daed264da7a0810c7ccbd377c55}{tab\+Frames})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface de estrutura da tabela de frames. 
+
+Interface responsavel pela definicao da estrutura da tabela de frames. 
+
+\subsection{Definições e macros}
+\hypertarget{_e___t_a_b_f_r_a_m_e_s_8h_a96842be40dbf0eab67687ef7ab7d608e}{}\index{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}!E\+X\+T4@{E\+X\+T4}}
+\index{E\+X\+T4@{E\+X\+T4}!E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+\subsubsection[{E\+X\+T4}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T4~extern}\label{_e___t_a_b_f_r_a_m_e_s_8h_a96842be40dbf0eab67687ef7ab7d608e}
+\hypertarget{_e___t_a_b_f_r_a_m_e_s_8h_adbfa5c021c0a9621b07ab953a1fb02b9}{}\index{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}!K\+E\+Y\+\_\+\+T\+A\+B0@{K\+E\+Y\+\_\+\+T\+A\+B0}}
+\index{K\+E\+Y\+\_\+\+T\+A\+B0@{K\+E\+Y\+\_\+\+T\+A\+B0}!E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+\subsubsection[{K\+E\+Y\+\_\+\+T\+A\+B0}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+E\+Y\+\_\+\+T\+A\+B0~0x398571}\label{_e___t_a_b_f_r_a_m_e_s_8h_adbfa5c021c0a9621b07ab953a1fb02b9}
+
+
+Chave para a tabela de frames. 
+
+\hypertarget{_e___t_a_b_f_r_a_m_e_s_8h_ae1ef6e06b77e373ae120480a5851090d}{}\index{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}!M\+A\+X\+\_\+\+O\+C\+U\+P\+A\+C\+A\+O@{M\+A\+X\+\_\+\+O\+C\+U\+P\+A\+C\+A\+O}}
+\index{M\+A\+X\+\_\+\+O\+C\+U\+P\+A\+C\+A\+O@{M\+A\+X\+\_\+\+O\+C\+U\+P\+A\+C\+A\+O}!E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+O\+C\+U\+P\+A\+C\+A\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+O\+C\+U\+P\+A\+C\+A\+O~9}\label{_e___t_a_b_f_r_a_m_e_s_8h_ae1ef6e06b77e373ae120480a5851090d}
+
+
+Numero maximo de frames que podem ocupar a sem uma liberacao. 
+
+\hypertarget{_e___t_a_b_f_r_a_m_e_s_8h_adebc67ff3f65237e9bfddd02e9330de8}{}\index{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}!N\+U\+M\+E\+R\+O\+\_\+\+F\+R\+A\+M\+E\+S@{N\+U\+M\+E\+R\+O\+\_\+\+F\+R\+A\+M\+E\+S}}
+\index{N\+U\+M\+E\+R\+O\+\_\+\+F\+R\+A\+M\+E\+S@{N\+U\+M\+E\+R\+O\+\_\+\+F\+R\+A\+M\+E\+S}!E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+\subsubsection[{N\+U\+M\+E\+R\+O\+\_\+\+F\+R\+A\+M\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+E\+R\+O\+\_\+\+F\+R\+A\+M\+E\+S~10}\label{_e___t_a_b_f_r_a_m_e_s_8h_adebc67ff3f65237e9bfddd02e9330de8}
+
+
+Numero total de frames da tabela. 
+
+\hypertarget{_e___t_a_b_f_r_a_m_e_s_8h_aabe4cdad19112b0537a9032ee0a337fd}{}\index{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}!O\+C\+U\+P\+A\+C\+A\+O\+\_\+\+O\+K@{O\+C\+U\+P\+A\+C\+A\+O\+\_\+\+O\+K}}
+\index{O\+C\+U\+P\+A\+C\+A\+O\+\_\+\+O\+K@{O\+C\+U\+P\+A\+C\+A\+O\+\_\+\+O\+K}!E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+\subsubsection[{O\+C\+U\+P\+A\+C\+A\+O\+\_\+\+O\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+C\+U\+P\+A\+C\+A\+O\+\_\+\+O\+K~8}\label{_e___t_a_b_f_r_a_m_e_s_8h_aabe4cdad19112b0537a9032ee0a337fd}
+
+
+Numero de frames em caso de liberacao de pafinas. 
+
+
+
+\subsection{Definições dos tipos}
+\hypertarget{_e___t_a_b_f_r_a_m_e_s_8h_ace44f6be19bb7b3e2e0179d40ff7183b}{}\index{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}!Frame@{Frame}}
+\index{Frame@{Frame}!E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+\subsubsection[{Frame}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf frame}  {\bf Frame}}\label{_e___t_a_b_f_r_a_m_e_s_8h_ace44f6be19bb7b3e2e0179d40ff7183b}
+
+
+Estrutura de frame. 
+
+Estrura que representa uma linha da tabela de paginas. \hypertarget{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{}\index{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}!Tab\+Frames@{Tab\+Frames}}
+\index{Tab\+Frames@{Tab\+Frames}!E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+\subsubsection[{Tab\+Frames}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tabela\+Frames}  {\bf Tab\+Frames}}\label{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}
+
+
+Estrutura de tabela de frames. 
+
+Estrura que representa uma tabela de frames 
+
+\subsection{Funções}
+\hypertarget{_e___t_a_b_f_r_a_m_e_s_8h_a0d6eb6a91cd972bcb2c6825b41107718}{}\index{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}!inicializa\+Tab\+Frames@{inicializa\+Tab\+Frames}}
+\index{inicializa\+Tab\+Frames@{inicializa\+Tab\+Frames}!E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+\subsubsection[{inicializa\+Tab\+Frames(int chave, Tab\+Frames $\ast$$\ast$tab\+Frames)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T4} int inicializa\+Tab\+Frames (
+\begin{DoxyParamCaption}
+\item[{int}]{chave, }
+\item[{{\bf Tab\+Frames} $\ast$$\ast$}]{tab\+Frames}
+\end{DoxyParamCaption}
+)}\label{_e___t_a_b_f_r_a_m_e_s_8h_a0d6eb6a91cd972bcb2c6825b41107718}
+Metodo responsavel por inicializar e retornar uma estrutura de tabela de frames em uma area compartilhada de memoria.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em chave} & Chave para a criacao da area de memoria compartilhada \\
+\hline
+{\em tab\+Frames} & ponteiro que vai receber o endereco da tabela de paginas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+id da area de memoria compartilhada 
+\end{DoxyReturn}
+\hypertarget{_e___t_a_b_f_r_a_m_e_s_8h_a01a27fe6700baa301904d8080bde0b67}{}\index{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}!remove\+Tab\+Frames@{remove\+Tab\+Frames}}
+\index{remove\+Tab\+Frames@{remove\+Tab\+Frames}!E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h@{E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h}}
+\subsubsection[{remove\+Tab\+Frames(int shmid, Tab\+Frames $\ast$tab\+Frames)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T4} int remove\+Tab\+Frames (
+\begin{DoxyParamCaption}
+\item[{int}]{shmid, }
+\item[{{\bf Tab\+Frames} $\ast$}]{tab\+Frames}
+\end{DoxyParamCaption}
+)}\label{_e___t_a_b_f_r_a_m_e_s_8h_a01a27fe6700baa301904d8080bde0b67}
+Metodo responsavel por remover uma area de memoria compartilhada que contem uma tabela de frames
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em shmid} & id da area de memoria comparilhada \\
+\hline
+{\em tab\+Frames} & ponteiro para a tabela de paginas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+0, em caso de sucesso, -\/1, em caso de erro 
+\end{DoxyReturn}

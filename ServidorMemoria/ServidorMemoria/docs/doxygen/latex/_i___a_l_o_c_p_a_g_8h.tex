@@ -1,0 +1,85 @@
+\hypertarget{_i___a_l_o_c_p_a_g_8h}{}\section{Referência do Arquivo include/\+I\+\_\+\+A\+L\+O\+C\+P\+A\+G.h}
+\label{_i___a_l_o_c_p_a_g_8h}\index{include/\+I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h@{include/\+I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h}}
+
+
+Interface do alocador de paginas.  
+
+
+{\ttfamily \#include \char`\"{}E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i___a_l_o_c_p_a_g_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{_i___a_l_o_c_p_a_g_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_i___a_l_o_c_p_a_g_8h_a1b19fbdd3be23e1bca939f6a02fb9223}{E\+X\+T1}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_i___a_l_o_c_p_a_g_8h_a1b19fbdd3be23e1bca939f6a02fb9223}{E\+X\+T1} int \hyperlink{_i___a_l_o_c_p_a_g_8h_a956c43a9fa862b1f4f5a577169eef5a3}{servico\+Alocacao\+Paginas} (int \hyperlink{_m___s_e_r_v_m_e_m_8c_a88878a2af8d822b257daf3145a09b725}{msg\+\_\+aloc\+\_\+id}, int msg\+\_\+user\+\_\+id, \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames} $\ast$tab\+\_\+frames, int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface do alocador de paginas. 
+
+Interface responsavel por disponibilizar servicos responsaveis pela alocacao de paginas do servidor de memoria. 
+
+\subsection{Definições e macros}
+\hypertarget{_i___a_l_o_c_p_a_g_8h_a1b19fbdd3be23e1bca939f6a02fb9223}{}\index{I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h@{I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h}!E\+X\+T1@{E\+X\+T1}}
+\index{E\+X\+T1@{E\+X\+T1}!I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h@{I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h}}
+\subsubsection[{E\+X\+T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T1~extern}\label{_i___a_l_o_c_p_a_g_8h_a1b19fbdd3be23e1bca939f6a02fb9223}
+
+
+\subsection{Funções}
+\hypertarget{_i___a_l_o_c_p_a_g_8h_a956c43a9fa862b1f4f5a577169eef5a3}{}\index{I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h@{I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h}!servico\+Alocacao\+Paginas@{servico\+Alocacao\+Paginas}}
+\index{servico\+Alocacao\+Paginas@{servico\+Alocacao\+Paginas}!I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h@{I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h}}
+\subsubsection[{servico\+Alocacao\+Paginas(int msg\+\_\+aloc\+\_\+id, int msg\+\_\+user\+\_\+id, Tab\+Frames $\ast$tab\+\_\+frames, int semid)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T1} int servico\+Alocacao\+Paginas (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\+\_\+aloc\+\_\+id, }
+\item[{int}]{msg\+\_\+user\+\_\+id, }
+\item[{{\bf Tab\+Frames} $\ast$}]{tab\+\_\+frames, }
+\item[{int}]{semid}
+\end{DoxyParamCaption}
+)}\label{_i___a_l_o_c_p_a_g_8h_a956c43a9fa862b1f4f5a577169eef5a3}
+Metodo responsavel por implementar os servicos relativos ao processo de alocacao de paginas da memoria. Ele espera uma solicitacao atraves de uma fila de mensagens e executa o servico solicitado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em msg\+\_\+aloc\+\_\+id} & id da fila de mensagens de entrada do alocador \\
+\hline
+{\em msg\+\_\+subs\+\_\+id} & id da fila de mensagens de entrada do substiuidor de paginas \\
+\hline
+{\em tab\+\_\+frames} & Tabela de frames \\
+\hline
+{\em semid} & id do conjunto de semaforos a ser utlizado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+-\/1 se ocorreu erro 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{_i___a_l_o_c_p_a_g_8h_a956c43a9fa862b1f4f5a577169eef5a3_cgraph}
+\end{center}
+\end{figure}
+
+

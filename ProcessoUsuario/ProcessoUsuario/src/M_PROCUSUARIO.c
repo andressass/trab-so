@@ -37,7 +37,7 @@ int msg_usu_id; //!< id das filas de mensagem de notificacao dos usuarios
  */
 int main(int argc, const char * argv[])
 {
-    char nomeArquivo[19];
+    char nomeArquivo[24];
     FILE* fp;
     int pag_ref_char, pag_ref_int;
     
@@ -46,12 +46,12 @@ int main(int argc, const char * argv[])
         exit(1);
     }
 
-    strcat(nomeArquivo, "pag_processo_");
+    strcat(nomeArquivo, "docs/pag_processo_");
     
     //Concatena o numero do processo ao nome incompleto do arquivo
     strcat(nomeArquivo, argv[1]);
     
-    //Concate a extensao ao arquivo
+    //Concatena a extensao ao arquivo
     strcat(nomeArquivo, ".txt");
     
     //Abre o arquivo para a leitura das paginas a serem referenciadas
@@ -70,13 +70,15 @@ int main(int argc, const char * argv[])
     
     //Verificamos se houve erro na criacao das filas de mensagens
     if (msg_usu_id < 0 || msg_aloc_id < 0) {
-        printf("Erro na obtencao das filas de mensagem. Encerrando servidor...\n");
+        printf("Erro na obtencao das filas de mensagem. Servidor não encontrado!!!\n\n");
         exit(1);
     }
     
+    //Obtem o primeiro caracter do arquivo
     pag_ref_char = getc(fp);
-    while(pag_ref_char != EOF) {
-        if (pag_ref_char != ',' && pag_ref_char != '\n') {
+    while(pag_ref_char != EOF) { //Enquanto o arquivo nao chega no fim
+        if (pag_ref_char != ',' && pag_ref_char != '\n') { //Se o caracter nao for uma virgula nem um enter
+            //Converte o caracter obtido do arquivo para inteiro
             pag_ref_int = pag_ref_char - '0';
             //Referencia pagina
             printf("%d", pag_ref_int);

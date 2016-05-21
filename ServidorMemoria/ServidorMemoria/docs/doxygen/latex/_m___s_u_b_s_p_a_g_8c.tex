@@ -1,0 +1,92 @@
+\hypertarget{_m___s_u_b_s_p_a_g_8c}{}\section{Referência do Arquivo src/\+M\+\_\+\+S\+U\+B\+S\+P\+A\+G.c}
+\label{_m___s_u_b_s_p_a_g_8c}\index{src/\+M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c@{src/\+M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c}}
+
+
+Modulo do substituidor de paginas.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+I\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/ipc.\+h$>$}\\*
+{\ttfamily \#include $<$sys/msg.\+h$>$}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___s_u_b_s_p_a_g_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___s_u_b_s_p_a_g_8c_a57b64d3e7d07d79d940369aa05c581ee}{M\+\_\+\+S\+U\+B\+S\+P\+A\+G}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___s_u_b_s_p_a_g_8c_a71adfd7bb3cb305072656d3b881d0c97}{libera\+Pagina\+Mais\+Antiga} (\hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames} $\ast$tab\+\_\+frames)
+\item 
+int \hyperlink{_m___s_u_b_s_p_a_g_8c_ad5974f087f678d4e344955f5ecd1a819}{servico\+Substuicao\+Paginas} (\hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames} $\ast$tab\+\_\+frames, int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Modulo do substituidor de paginas. 
+
+Modulo responsavel por implementar os servicos responsaveis pela substituicao de paginas do servidor de memoria. 
+
+\subsection{Definições e macros}
+\hypertarget{_m___s_u_b_s_p_a_g_8c_a57b64d3e7d07d79d940369aa05c581ee}{}\index{M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c@{M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c}!M\+\_\+\+S\+U\+B\+S\+P\+A\+G@{M\+\_\+\+S\+U\+B\+S\+P\+A\+G}}
+\index{M\+\_\+\+S\+U\+B\+S\+P\+A\+G@{M\+\_\+\+S\+U\+B\+S\+P\+A\+G}!M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c@{M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c}}
+\subsubsection[{M\+\_\+\+S\+U\+B\+S\+P\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+S\+U\+B\+S\+P\+A\+G}\label{_m___s_u_b_s_p_a_g_8c_a57b64d3e7d07d79d940369aa05c581ee}
+
+
+\subsection{Funções}
+\hypertarget{_m___s_u_b_s_p_a_g_8c_a71adfd7bb3cb305072656d3b881d0c97}{}\index{M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c@{M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c}!libera\+Pagina\+Mais\+Antiga@{libera\+Pagina\+Mais\+Antiga}}
+\index{libera\+Pagina\+Mais\+Antiga@{libera\+Pagina\+Mais\+Antiga}!M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c@{M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c}}
+\subsubsection[{libera\+Pagina\+Mais\+Antiga(\+Tab\+Frames $\ast$tab\+\_\+frames)}]{\setlength{\rightskip}{0pt plus 5cm}void libera\+Pagina\+Mais\+Antiga (
+\begin{DoxyParamCaption}
+\item[{{\bf Tab\+Frames} $\ast$}]{tab\+\_\+frames}
+\end{DoxyParamCaption}
+)}\label{_m___s_u_b_s_p_a_g_8c_a71adfd7bb3cb305072656d3b881d0c97}
+Metodo responsavel por implementar os servicos relativos a liberacao da pagina com o tempo de referencia mais antigo da tabela de frames.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tab\+\_\+frames} & Tabela de frames \\
+\hline
+\end{DoxyParams}
+\hypertarget{_m___s_u_b_s_p_a_g_8c_ad5974f087f678d4e344955f5ecd1a819}{}\index{M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c@{M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c}!servico\+Substuicao\+Paginas@{servico\+Substuicao\+Paginas}}
+\index{servico\+Substuicao\+Paginas@{servico\+Substuicao\+Paginas}!M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c@{M\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+c}}
+\subsubsection[{servico\+Substuicao\+Paginas(\+Tab\+Frames $\ast$tab\+\_\+frames, int semid)}]{\setlength{\rightskip}{0pt plus 5cm}int servico\+Substuicao\+Paginas (
+\begin{DoxyParamCaption}
+\item[{{\bf Tab\+Frames} $\ast$}]{tab\+\_\+frames, }
+\item[{int}]{semid}
+\end{DoxyParamCaption}
+)}\label{_m___s_u_b_s_p_a_g_8c_ad5974f087f678d4e344955f5ecd1a819}
+Metodo responsavel por implementar os servicos relativos ao processo de substituicao de pagina na memoria.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tab\+\_\+frames} & Tabela de frames \\
+\hline
+{\em semid} & id do conjunto de semaforos a ser utlizado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+-\/1 se ocorreu erro 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___s_u_b_s_p_a_g_8c_ad5974f087f678d4e344955f5ecd1a819_cgraph}
+\end{center}
+\end{figure}
+
+

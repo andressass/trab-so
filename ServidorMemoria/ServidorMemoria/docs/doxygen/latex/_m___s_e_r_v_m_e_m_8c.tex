@@ -1,0 +1,134 @@
+\hypertarget{_m___s_e_r_v_m_e_m_8c}{}\section{Referência do Arquivo src/\+M\+\_\+\+S\+E\+R\+V\+M\+E\+M.c}
+\label{_m___s_e_r_v_m_e_m_8c}\index{src/\+M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{src/\+M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}}
+
+
+Modulo de Inicializacao do servidor de memória.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/\+I\+\_\+\+S\+U\+B\+S\+P\+A\+G.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/\+I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/\+E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/\+E\+\_\+\+T\+A\+B\+F\+R\+A\+M\+E\+S.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/\+E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___s_e_r_v_m_e_m_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_m___s_e_r_v_m_e_m_8c_a17628c6b6e2ca5b588b49fa53918c1d2}{encerra\+Servidor} ()
+\item 
+int \hyperlink{_m___s_e_r_v_m_e_m_8c_ac0f2228420376f4db7e1274f2b41667c}{main} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_m___s_e_r_v_m_e_m_8c_af500917c052066b40cf47f96b43c607b}{pid}
+\begin{DoxyCompactList}\small\item\em id do processo atual \end{DoxyCompactList}\item 
+int \hyperlink{_m___s_e_r_v_m_e_m_8c_a88878a2af8d822b257daf3145a09b725}{msg\+\_\+aloc\+\_\+id}
+\begin{DoxyCompactList}\small\item\em id das filas de mensagem de entrada do alocador \end{DoxyCompactList}\item 
+int \hyperlink{_m___s_e_r_v_m_e_m_8c_ae57050834a3b1770e0e855e42f4ad41d}{msg\+\_\+usu\+\_\+id}
+\begin{DoxyCompactList}\small\item\em id das filas de mensagem de notificacao dos usuarios \end{DoxyCompactList}\item 
+int \hyperlink{_m___s_e_r_v_m_e_m_8c_ac8807d215d2ee6d9779d76aeb1147430}{shmid}
+\begin{DoxyCompactList}\small\item\em id da area de memoria compartilhada da tabela de frames \end{DoxyCompactList}\item 
+int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid}
+\begin{DoxyCompactList}\small\item\em id do conjunto semaforos; \end{DoxyCompactList}\item 
+\hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames} $\ast$ \hyperlink{_m___s_e_r_v_m_e_m_8c_afb269daed264da7a0810c7ccbd377c55}{tab\+Frames}
+\begin{DoxyCompactList}\small\item\em ponteiro para a tabela de frames \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Modulo de Inicializacao do servidor de memória. 
+
+Modulo responsavel por implementar os metodos relacionados a inicializacao de estruturas e a execucao do servidor de memoria. Eh responsavel pela alocacao e substituicao de paginas. 
+
+\subsection{Funções}
+\hypertarget{_m___s_e_r_v_m_e_m_8c_a17628c6b6e2ca5b588b49fa53918c1d2}{}\index{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}!encerra\+Servidor@{encerra\+Servidor}}
+\index{encerra\+Servidor@{encerra\+Servidor}!M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}}
+\subsubsection[{encerra\+Servidor()}]{\setlength{\rightskip}{0pt plus 5cm}void encerra\+Servidor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_m___s_e_r_v_m_e_m_8c_a17628c6b6e2ca5b588b49fa53918c1d2}
+Metodo responsavel por encerrar o servidor de memoria 
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{_m___s_e_r_v_m_e_m_8c_a17628c6b6e2ca5b588b49fa53918c1d2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_m___s_e_r_v_m_e_m_8c_ac0f2228420376f4db7e1274f2b41667c}{}\index{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}!main@{main}}
+\index{main@{main}!M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}}
+\subsubsection[{main(int argc, const char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{_m___s_e_r_v_m_e_m_8c_ac0f2228420376f4db7e1274f2b41667c}
+Metodo inicial do sistema 
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___s_e_r_v_m_e_m_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variáveis}
+\hypertarget{_m___s_e_r_v_m_e_m_8c_a88878a2af8d822b257daf3145a09b725}{}\index{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}!msg\+\_\+aloc\+\_\+id@{msg\+\_\+aloc\+\_\+id}}
+\index{msg\+\_\+aloc\+\_\+id@{msg\+\_\+aloc\+\_\+id}!M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}}
+\subsubsection[{msg\+\_\+aloc\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}int msg\+\_\+aloc\+\_\+id}\label{_m___s_e_r_v_m_e_m_8c_a88878a2af8d822b257daf3145a09b725}
+
+
+id das filas de mensagem de entrada do alocador 
+
+\hypertarget{_m___s_e_r_v_m_e_m_8c_ae57050834a3b1770e0e855e42f4ad41d}{}\index{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}!msg\+\_\+usu\+\_\+id@{msg\+\_\+usu\+\_\+id}}
+\index{msg\+\_\+usu\+\_\+id@{msg\+\_\+usu\+\_\+id}!M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}}
+\subsubsection[{msg\+\_\+usu\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}int msg\+\_\+usu\+\_\+id}\label{_m___s_e_r_v_m_e_m_8c_ae57050834a3b1770e0e855e42f4ad41d}
+
+
+id das filas de mensagem de notificacao dos usuarios 
+
+\hypertarget{_m___s_e_r_v_m_e_m_8c_af500917c052066b40cf47f96b43c607b}{}\index{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}!pid@{pid}}
+\index{pid@{pid}!M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}}
+\subsubsection[{pid}]{\setlength{\rightskip}{0pt plus 5cm}int pid}\label{_m___s_e_r_v_m_e_m_8c_af500917c052066b40cf47f96b43c607b}
+
+
+id do processo atual 
+
+\hypertarget{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{}\index{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}!semid@{semid}}
+\index{semid@{semid}!M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}}
+\subsubsection[{semid}]{\setlength{\rightskip}{0pt plus 5cm}int semid}\label{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}
+
+
+id do conjunto semaforos; 
+
+\hypertarget{_m___s_e_r_v_m_e_m_8c_ac8807d215d2ee6d9779d76aeb1147430}{}\index{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}!shmid@{shmid}}
+\index{shmid@{shmid}!M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}}
+\subsubsection[{shmid}]{\setlength{\rightskip}{0pt plus 5cm}int shmid}\label{_m___s_e_r_v_m_e_m_8c_ac8807d215d2ee6d9779d76aeb1147430}
+
+
+id da area de memoria compartilhada da tabela de frames 
+
+\hypertarget{_m___s_e_r_v_m_e_m_8c_afb269daed264da7a0810c7ccbd377c55}{}\index{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}!tab\+Frames@{tab\+Frames}}
+\index{tab\+Frames@{tab\+Frames}!M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c@{M\+\_\+\+S\+E\+R\+V\+M\+E\+M.\+c}}
+\subsubsection[{tab\+Frames}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tab\+Frames}$\ast$ tab\+Frames}\label{_m___s_e_r_v_m_e_m_8c_afb269daed264da7a0810c7ccbd377c55}
+
+
+ponteiro para a tabela de frames 
+

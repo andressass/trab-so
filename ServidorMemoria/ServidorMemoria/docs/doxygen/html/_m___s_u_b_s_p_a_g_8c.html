@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>„ServidordeMemoriaVirtual“: Referência do Arquivo src/M_SUBSPAG.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">„ServidordeMemoriaVirtual“
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo M_SUBSPAG.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Modulo do substituidor de paginas.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_i___s_u_b_s_p_a_g_8h_source.html">../include/I_SUBSPAG.h</a>&quot;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/ipc.h&gt;</code><br />
+<code>#include &lt;sys/msg.h&gt;</code><br />
+<code>#include &lt;sys/time.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para M_SUBSPAG.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___s_u_b_s_p_a_g_8c__incl.png" border="0" usemap="#src_2_m___s_u_b_s_p_a_g_8c" alt=""/></div>
+<map name="src_2_m___s_u_b_s_p_a_g_8c" id="src_2_m___s_u_b_s_p_a_g_8c">
+<area shape="rect" id="node2" href="_i___s_u_b_s_p_a_g_8h.html" title="Interface do substituidor de paginas. " alt="" coords="276,79,440,104"/>
+<area shape="rect" id="node3" href="_e___t_a_b_f_r_a_m_e_s_8h.html" title="Interface de estrutura da tabela de frames. " alt="" coords="312,152,441,177"/>
+<area shape="rect" id="node9" href="_e___s_e_m_a_f_o_r_o_8h.html" title="Interface dos semaforos de Dijkstra. " alt="" coords="163,152,289,177"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a57b64d3e7d07d79d940369aa05c581ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___s_u_b_s_p_a_g_8c.html#a57b64d3e7d07d79d940369aa05c581ee">M_SUBSPAG</a></td></tr>
+<tr class="separator:a57b64d3e7d07d79d940369aa05c581ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a71adfd7bb3cb305072656d3b881d0c97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___s_u_b_s_p_a_g_8c.html#a71adfd7bb3cb305072656d3b881d0c97">liberaPaginaMaisAntiga</a> (<a class="el" href="_e___t_a_b_f_r_a_m_e_s_8h.html#a86ed69b032faa8369e85d853b53bd5de">TabFrames</a> *tab_frames)</td></tr>
+<tr class="separator:a71adfd7bb3cb305072656d3b881d0c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5974f087f678d4e344955f5ecd1a819"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_m___s_u_b_s_p_a_g_8c.html#ad5974f087f678d4e344955f5ecd1a819">servicoSubstuicaoPaginas</a> (<a class="el" href="_e___t_a_b_f_r_a_m_e_s_8h.html#a86ed69b032faa8369e85d853b53bd5de">TabFrames</a> *tab_frames, int <a class="el" href="_m___s_e_r_v_m_e_m_8c.html#a7c35ac5305085cf7360645b8d52988b5">semid</a>)</td></tr>
+<tr class="separator:ad5974f087f678d4e344955f5ecd1a819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Modulo do substituidor de paginas. </p>
+<p>Modulo responsavel por implementar os servicos responsaveis pela substituicao de paginas do servidor de memoria. </p>
+</div><h2 class="groupheader">Definições e macros</h2>
+<a class="anchor" id="a57b64d3e7d07d79d940369aa05c581ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define M_SUBSPAG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a71adfd7bb3cb305072656d3b881d0c97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void liberaPaginaMaisAntiga </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___t_a_b_f_r_a_m_e_s_8h.html#a86ed69b032faa8369e85d853b53bd5de">TabFrames</a> *&#160;</td>
+          <td class="paramname"><em>tab_frames</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo responsavel por implementar os servicos relativos a liberacao da pagina com o tempo de referencia mais antigo da tabela de frames.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tab_frames</td><td>Tabela de frames </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad5974f087f678d4e344955f5ecd1a819"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int servicoSubstuicaoPaginas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e___t_a_b_f_r_a_m_e_s_8h.html#a86ed69b032faa8369e85d853b53bd5de">TabFrames</a> *&#160;</td>
+          <td class="paramname"><em>tab_frames</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>semid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo responsavel por implementar os servicos relativos ao processo de substituicao de pagina na memoria.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tab_frames</td><td>Tabela de frames </td></tr>
+    <tr><td class="paramname">semid</td><td>id do conjunto de semaforos a ser utlizado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>-1 se ocorreu erro </dd></dl>
+
+<p><div class="dynheader">
+Este é o diagrama das funções utilizadas por esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="_m___s_u_b_s_p_a_g_8c_ad5974f087f678d4e344955f5ecd1a819_cgraph.png" border="0" usemap="#_m___s_u_b_s_p_a_g_8c_ad5974f087f678d4e344955f5ecd1a819_cgraph" alt=""/></div>
+<map name="_m___s_u_b_s_p_a_g_8c_ad5974f087f678d4e344955f5ecd1a819_cgraph" id="_m___s_u_b_s_p_a_g_8c_ad5974f087f678d4e344955f5ecd1a819_cgraph">
+<area shape="rect" id="node2" href="_e___s_e_m_a_f_o_r_o_8h.html#ab47db526ad7b92be878653712cf41889" title="P" alt="" coords="292,5,331,31"/>
+<area shape="rect" id="node3" href="_m___s_u_b_s_p_a_g_8c.html#a71adfd7bb3cb305072656d3b881d0c97" title="liberaPaginaMaisAntiga" alt="" coords="231,55,392,80"/>
+<area shape="rect" id="node4" href="_e___s_e_m_a_f_o_r_o_8h.html#a0fc28ce37e9beac005cfbe8cf50095da" title="V" alt="" coords="292,104,331,129"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

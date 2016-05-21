@@ -1,0 +1,130 @@
+\hypertarget{_m___a_l_o_c_p_a_g_8c}{}\section{Referência do Arquivo src/\+M\+\_\+\+A\+L\+O\+C\+P\+A\+G.c}
+\label{_m___a_l_o_c_p_a_g_8c}\index{src/\+M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c@{src/\+M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c}}
+
+
+Modulo do alocador de paginas.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+I\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/ipc.\+h$>$}\\*
+{\ttfamily \#include $<$sys/msg.\+h$>$}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___a_l_o_c_p_a_g_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___a_l_o_c_p_a_g_8c_a7f46234a89d2e594cf0a798e8080a1d2}{M\+\_\+\+A\+L\+O\+C\+P\+A\+G}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_m___a_l_o_c_p_a_g_8c_aa45a792354467298e214f693de78311e}{busca\+Pagina} (\hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames} $\ast$tab\+\_\+frames, int pag\+\_\+num)
+\item 
+int \hyperlink{_m___a_l_o_c_p_a_g_8c_a71b6022d92aab068c0eb27f0dc625dfd}{aloca\+Pagina} (\hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames} $\ast$tab\+\_\+frames, int pag\+\_\+num)
+\item 
+int \hyperlink{_m___a_l_o_c_p_a_g_8c_a288aefba60ae2170eeb4e813a6ffd5c2}{servico\+Alocacao\+Paginas} (int \hyperlink{_m___s_e_r_v_m_e_m_8c_a88878a2af8d822b257daf3145a09b725}{msg\+\_\+aloc\+\_\+id}, int msg\+\_\+user\+\_\+id, \hyperlink{_e___t_a_b_f_r_a_m_e_s_8h_a86ed69b032faa8369e85d853b53bd5de}{Tab\+Frames} $\ast$tab\+\_\+frames, int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Modulo do alocador de paginas. 
+
+Modulo de estrutura de mensagens.
+
+Modulo responsavel por implementar os servicos responsaveis pela alocacao de paginas do servidor de memoria.
+
+Modulo responsavel por implementar os metodos relacionados as estruturas de mensagens utilizadas na fila de mensagens para a comunicação entre processos. 
+
+\subsection{Definições e macros}
+\hypertarget{_m___a_l_o_c_p_a_g_8c_a7f46234a89d2e594cf0a798e8080a1d2}{}\index{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c}!M\+\_\+\+A\+L\+O\+C\+P\+A\+G@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G}}
+\index{M\+\_\+\+A\+L\+O\+C\+P\+A\+G@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G}!M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c}}
+\subsubsection[{M\+\_\+\+A\+L\+O\+C\+P\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+A\+L\+O\+C\+P\+A\+G}\label{_m___a_l_o_c_p_a_g_8c_a7f46234a89d2e594cf0a798e8080a1d2}
+
+
+\subsection{Funções}
+\hypertarget{_m___a_l_o_c_p_a_g_8c_a71b6022d92aab068c0eb27f0dc625dfd}{}\index{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c}!aloca\+Pagina@{aloca\+Pagina}}
+\index{aloca\+Pagina@{aloca\+Pagina}!M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c}}
+\subsubsection[{aloca\+Pagina(\+Tab\+Frames $\ast$tab\+\_\+frames, int pag\+\_\+num)}]{\setlength{\rightskip}{0pt plus 5cm}int aloca\+Pagina (
+\begin{DoxyParamCaption}
+\item[{{\bf Tab\+Frames} $\ast$}]{tab\+\_\+frames, }
+\item[{int}]{pag\+\_\+num}
+\end{DoxyParamCaption}
+)}\label{_m___a_l_o_c_p_a_g_8c_a71b6022d92aab068c0eb27f0dc625dfd}
+Metodo responsavel por implementar os servicos relativos a alocaco de paginas em uma tabela de frames
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tab\+\_\+frames} & Tabela de frames \\
+\hline
+{\em pag\+\_\+num} & numero da pagina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Numero do frame, caso encontre a pagina; -\/1, se ocorreu page fault 
+\end{DoxyReturn}
+\hypertarget{_m___a_l_o_c_p_a_g_8c_aa45a792354467298e214f693de78311e}{}\index{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c}!busca\+Pagina@{busca\+Pagina}}
+\index{busca\+Pagina@{busca\+Pagina}!M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c}}
+\subsubsection[{busca\+Pagina(\+Tab\+Frames $\ast$tab\+\_\+frames, int pag\+\_\+num)}]{\setlength{\rightskip}{0pt plus 5cm}int busca\+Pagina (
+\begin{DoxyParamCaption}
+\item[{{\bf Tab\+Frames} $\ast$}]{tab\+\_\+frames, }
+\item[{int}]{pag\+\_\+num}
+\end{DoxyParamCaption}
+)}\label{_m___a_l_o_c_p_a_g_8c_aa45a792354467298e214f693de78311e}
+Metodo responsavel por implementar os servicos relativos a busca de paginas em uma tabela de frames
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tab\+\_\+frames} & Tabela de frames \\
+\hline
+{\em pag\+\_\+num} & numero da pagina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Numero do frame, caso encontre a pagina; -\/1, se ocorreu page fault 
+\end{DoxyReturn}
+\hypertarget{_m___a_l_o_c_p_a_g_8c_a288aefba60ae2170eeb4e813a6ffd5c2}{}\index{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c}!servico\+Alocacao\+Paginas@{servico\+Alocacao\+Paginas}}
+\index{servico\+Alocacao\+Paginas@{servico\+Alocacao\+Paginas}!M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c@{M\+\_\+\+A\+L\+O\+C\+P\+A\+G.\+c}}
+\subsubsection[{servico\+Alocacao\+Paginas(int msg\+\_\+aloc\+\_\+id, int msg\+\_\+user\+\_\+id, Tab\+Frames $\ast$tab\+\_\+frames, int semid)}]{\setlength{\rightskip}{0pt plus 5cm}int servico\+Alocacao\+Paginas (
+\begin{DoxyParamCaption}
+\item[{int}]{msg\+\_\+aloc\+\_\+id, }
+\item[{int}]{msg\+\_\+user\+\_\+id, }
+\item[{{\bf Tab\+Frames} $\ast$}]{tab\+\_\+frames, }
+\item[{int}]{semid}
+\end{DoxyParamCaption}
+)}\label{_m___a_l_o_c_p_a_g_8c_a288aefba60ae2170eeb4e813a6ffd5c2}
+Metodo responsavel por implementar os servicos relativos ao processo de alocacao de paginas da memoria. Ele espera uma solicitacao atraves de uma fila de mensagens e executa o servico solicitado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em msg\+\_\+aloc\+\_\+id} & id da fila de mensagens de entrada do alocador \\
+\hline
+{\em msg\+\_\+subs\+\_\+id} & id da fila de mensagens de entrada do substiuidor de paginas \\
+\hline
+{\em tab\+\_\+frames} & Tabela de frames \\
+\hline
+{\em semid} & id do conjunto de semaforos a ser utlizado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+-\/1 se ocorreu erro 
+\end{DoxyReturn}
+
+
+Este é o diagrama das funções utilizadas por esta função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{_m___a_l_o_c_p_a_g_8c_a288aefba60ae2170eeb4e813a6ffd5c2_cgraph}
+\end{center}
+\end{figure}
+
+

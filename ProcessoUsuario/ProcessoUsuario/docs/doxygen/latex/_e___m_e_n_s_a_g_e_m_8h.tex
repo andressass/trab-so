@@ -1,0 +1,102 @@
+\hypertarget{_e___m_e_n_s_a_g_e_m_8h}{}\section{Referência do Arquivo include/\+E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.h}
+\label{_e___m_e_n_s_a_g_e_m_8h}\index{include/\+E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{include/\+E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}}
+
+
+Interface de estrutura de mensagens.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/ipc.\+h$>$}\\*
+{\ttfamily \#include $<$sys/msg.\+h$>$}\\*
+Gráfico de dependência de inclusões para E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e___m_e_n_s_a_g_e_m_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{_e___m_e_n_s_a_g_e_m_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmensagem}{mensagem}
+\begin{DoxyCompactList}\small\item\em Estrutura de mensagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_e___m_e_n_s_a_g_e_m_8h_ae4ad4682bcea787f40f19afc2c3dc907}{E\+X\+T6}~extern
+\item 
+\#define \hyperlink{_e___m_e_n_s_a_g_e_m_8h_a430964ddbf255bb5305cb4d183f7aeaa}{K\+E\+Y\+\_\+\+T0}~0x398801
+\begin{DoxyCompactList}\small\item\em Chave para a fila de mensagens do processo de alocacao de memoria. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___m_e_n_s_a_g_e_m_8h_ad839b4de8d1726d14f7aa96520d63a75}{K\+E\+Y\+\_\+\+T1}~0x539712
+\begin{DoxyCompactList}\small\item\em Chave para a fila de mensagens para notificacao dos processo de usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structmensagem}{mensagem} \hyperlink{_e___m_e_n_s_a_g_e_m_8h_a7f28ef2afbad397da434a1a718a4b45a}{Mensagem}
+\begin{DoxyCompactList}\small\item\em Estrutura de mensagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_e___m_e_n_s_a_g_e_m_8h_ae4ad4682bcea787f40f19afc2c3dc907}{E\+X\+T6} \hyperlink{_e___m_e_n_s_a_g_e_m_8h_a7f28ef2afbad397da434a1a718a4b45a}{Mensagem} $\ast$ \hyperlink{_e___m_e_n_s_a_g_e_m_8h_a681f7d0fe37fb0c9956243abc7abd9b7}{inicializa\+Mensagem} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface de estrutura de mensagens. 
+
+Interface responsavel pela definicao da estrutura de mensagens utilizadas na fila de mensagens para a comunicação entre processos. 
+
+\subsection{Definições e macros}
+\hypertarget{_e___m_e_n_s_a_g_e_m_8h_ae4ad4682bcea787f40f19afc2c3dc907}{}\index{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}!E\+X\+T6@{E\+X\+T6}}
+\index{E\+X\+T6@{E\+X\+T6}!E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}}
+\subsubsection[{E\+X\+T6}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T6~extern}\label{_e___m_e_n_s_a_g_e_m_8h_ae4ad4682bcea787f40f19afc2c3dc907}
+\hypertarget{_e___m_e_n_s_a_g_e_m_8h_a430964ddbf255bb5305cb4d183f7aeaa}{}\index{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}!K\+E\+Y\+\_\+\+T0@{K\+E\+Y\+\_\+\+T0}}
+\index{K\+E\+Y\+\_\+\+T0@{K\+E\+Y\+\_\+\+T0}!E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}}
+\subsubsection[{K\+E\+Y\+\_\+\+T0}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+E\+Y\+\_\+\+T0~0x398801}\label{_e___m_e_n_s_a_g_e_m_8h_a430964ddbf255bb5305cb4d183f7aeaa}
+
+
+Chave para a fila de mensagens do processo de alocacao de memoria. 
+
+\hypertarget{_e___m_e_n_s_a_g_e_m_8h_ad839b4de8d1726d14f7aa96520d63a75}{}\index{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}!K\+E\+Y\+\_\+\+T1@{K\+E\+Y\+\_\+\+T1}}
+\index{K\+E\+Y\+\_\+\+T1@{K\+E\+Y\+\_\+\+T1}!E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}}
+\subsubsection[{K\+E\+Y\+\_\+\+T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+E\+Y\+\_\+\+T1~0x539712}\label{_e___m_e_n_s_a_g_e_m_8h_ad839b4de8d1726d14f7aa96520d63a75}
+
+
+Chave para a fila de mensagens para notificacao dos processo de usuario. 
+
+
+
+\subsection{Definições dos tipos}
+\hypertarget{_e___m_e_n_s_a_g_e_m_8h_a7f28ef2afbad397da434a1a718a4b45a}{}\index{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}!Mensagem@{Mensagem}}
+\index{Mensagem@{Mensagem}!E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}}
+\subsubsection[{Mensagem}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf mensagem}  {\bf Mensagem}}\label{_e___m_e_n_s_a_g_e_m_8h_a7f28ef2afbad397da434a1a718a4b45a}
+
+
+Estrutura de mensagem. 
+
+Estrura que representa uma mensagem de comunicacao entre processos. 
+
+\subsection{Funções}
+\hypertarget{_e___m_e_n_s_a_g_e_m_8h_a681f7d0fe37fb0c9956243abc7abd9b7}{}\index{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}!inicializa\+Mensagem@{inicializa\+Mensagem}}
+\index{inicializa\+Mensagem@{inicializa\+Mensagem}!E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h@{E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h}}
+\subsubsection[{inicializa\+Mensagem()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T6} {\bf Mensagem}$\ast$ inicializa\+Mensagem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_e___m_e_n_s_a_g_e_m_8h_a681f7d0fe37fb0c9956243abc7abd9b7}
+Metodo responsavel por inicializar e retornar uma estrutura de mensagem
+
+\begin{DoxyReturn}{Retorna}
+Estrutura de mensagem inicializada 
+\end{DoxyReturn}

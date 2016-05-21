@@ -33,7 +33,7 @@ void liberaPaginaMaisAntiga(TabFrames* tab_frames){
     //Escolhemos a pagina que foi referenciada a mais tempo
     for (int i = 1; i < NUMERO_FRAMES; i++){
         //Se o tempo de referencia for mais antigo que o mais antigo ja obtido e o frame estiver ocupado
-        if(tab_frames->frames[i].num_pag > 0 && tab_frames->frames[i].tempo_ref < older_time){
+        if(tab_frames->frames[i].num_pag >= 0 && tab_frames->frames[i].tempo_ref < older_time){
            
             //Atualizamos o indice do frame mais antigo
             older_frame = i;

@@ -1,0 +1,101 @@
+\hypertarget{_m___p_r_o_c_u_s_u_a_r_i_o_8c}{}\section{Referência do Arquivo src/\+M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.c}
+\label{_m___p_r_o_c_u_s_u_a_r_i_o_8c}\index{src/\+M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{src/\+M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}}
+
+
+Modulo do processo de usuario.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/\+E\+\_\+\+M\+E\+N\+S\+A\+G\+E\+M.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m___p_r_o_c_u_s_u_a_r_i_o_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m___p_r_o_c_u_s_u_a_r_i_o_8c_a810c5b751df5bb30588613ed91095129}{N\+P\+R\+O\+C}~10
+\begin{DoxyCompactList}\small\item\em Numero total de processos de usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_m___p_r_o_c_u_s_u_a_r_i_o_8c_ac0f2228420376f4db7e1274f2b41667c}{main} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_m___p_r_o_c_u_s_u_a_r_i_o_8c_af500917c052066b40cf47f96b43c607b}{pid}
+\begin{DoxyCompactList}\small\item\em id do processo atual \end{DoxyCompactList}\item 
+int \hyperlink{_m___p_r_o_c_u_s_u_a_r_i_o_8c_a88878a2af8d822b257daf3145a09b725}{msg\+\_\+aloc\+\_\+id}
+\begin{DoxyCompactList}\small\item\em id das filas de mensagem de entrada do alocador \end{DoxyCompactList}\item 
+int \hyperlink{_m___p_r_o_c_u_s_u_a_r_i_o_8c_ae57050834a3b1770e0e855e42f4ad41d}{msg\+\_\+usu\+\_\+id}
+\begin{DoxyCompactList}\small\item\em id das filas de mensagem de notificacao dos usuarios \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Modulo do processo de usuario. 
+
+Modulo responsavel por implementar os metodos relacionados a criacao de N processos de usuarios, em que cada um realiza uma chamada a primitiva referencia\+\_\+pagina(i), onde i eh o numero da pagina. Essas paginas a serem referenciadas por um processo n estao no arquivo pag\+\_\+processo\+\_\+n. 
+
+\subsection{Definições e macros}
+\hypertarget{_m___p_r_o_c_u_s_u_a_r_i_o_8c_a810c5b751df5bb30588613ed91095129}{}\index{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}!N\+P\+R\+O\+C@{N\+P\+R\+O\+C}}
+\index{N\+P\+R\+O\+C@{N\+P\+R\+O\+C}!M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}}
+\subsubsection[{N\+P\+R\+O\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+P\+R\+O\+C~10}\label{_m___p_r_o_c_u_s_u_a_r_i_o_8c_a810c5b751df5bb30588613ed91095129}
+
+
+Numero total de processos de usuario. 
+
+
+
+\subsection{Funções}
+\hypertarget{_m___p_r_o_c_u_s_u_a_r_i_o_8c_ac0f2228420376f4db7e1274f2b41667c}{}\index{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}!main@{main}}
+\index{main@{main}!M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}}
+\subsubsection[{main(int argc, const char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{_m___p_r_o_c_u_s_u_a_r_i_o_8c_ac0f2228420376f4db7e1274f2b41667c}
+Metodo inicial do sistema 
+
+Este é o diagrama das funções utilizadas por esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{_m___p_r_o_c_u_s_u_a_r_i_o_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variáveis}
+\hypertarget{_m___p_r_o_c_u_s_u_a_r_i_o_8c_a88878a2af8d822b257daf3145a09b725}{}\index{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}!msg\+\_\+aloc\+\_\+id@{msg\+\_\+aloc\+\_\+id}}
+\index{msg\+\_\+aloc\+\_\+id@{msg\+\_\+aloc\+\_\+id}!M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}}
+\subsubsection[{msg\+\_\+aloc\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}int msg\+\_\+aloc\+\_\+id}\label{_m___p_r_o_c_u_s_u_a_r_i_o_8c_a88878a2af8d822b257daf3145a09b725}
+
+
+id das filas de mensagem de entrada do alocador 
+
+\hypertarget{_m___p_r_o_c_u_s_u_a_r_i_o_8c_ae57050834a3b1770e0e855e42f4ad41d}{}\index{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}!msg\+\_\+usu\+\_\+id@{msg\+\_\+usu\+\_\+id}}
+\index{msg\+\_\+usu\+\_\+id@{msg\+\_\+usu\+\_\+id}!M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}}
+\subsubsection[{msg\+\_\+usu\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}int msg\+\_\+usu\+\_\+id}\label{_m___p_r_o_c_u_s_u_a_r_i_o_8c_ae57050834a3b1770e0e855e42f4ad41d}
+
+
+id das filas de mensagem de notificacao dos usuarios 
+
+\hypertarget{_m___p_r_o_c_u_s_u_a_r_i_o_8c_af500917c052066b40cf47f96b43c607b}{}\index{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}!pid@{pid}}
+\index{pid@{pid}!M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c@{M\+\_\+\+P\+R\+O\+C\+U\+S\+U\+A\+R\+I\+O.\+c}}
+\subsubsection[{pid}]{\setlength{\rightskip}{0pt plus 5cm}int pid}\label{_m___p_r_o_c_u_s_u_a_r_i_o_8c_af500917c052066b40cf47f96b43c607b}
+
+
+id do processo atual 
+

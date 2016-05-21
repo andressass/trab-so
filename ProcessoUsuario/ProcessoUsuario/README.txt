@@ -5,15 +5,6 @@
 #	    
 #############################################################################
 
-#----------------------------------------------------------------------------
-# Suporte
-#----------------------------------------------------------------------------
-
-Suporte somente aos seguintes métodos de bibliotecas java:
-
-	java/io/PrintStream.println
-	java/lang/StringBuffer.toString
-	java/lang/StringBuffer.append
 
 #----------------------------------------------------------------------------
 # Compilação e execucao
@@ -21,31 +12,17 @@ Suporte somente aos seguintes métodos de bibliotecas java:
 
 Para compilar digite:
 
-	Em sistemas unix:
-		$ make all_unix
-
-	Em sistemas Windows:
-		$ make all_win
+	$ make all
 
 
 Para executar digite:
 
-	Em sistemas unix:
-		$ /.jvm <arquivo_class> <String de caracteres>
+	$ ./procUsuario <N>
 
-		ou
+Para executar N processos digite:
 
-		$ .jvm <arquivo_class> <String de caracteres>
-
-		exemplo
-
-		$ ./jvm docs/HelloWorld.class bla bla bla
-
-
-	Em sistemas Windows:
-		$. a.exe <arquivo_entrada> <String de caracteres>
-
-
+	$ ./criaNProcessos.sh
+	(Definir no valor de N no arquivo criaNProcessos.sh)
 
 #----------------------------------------------------------------------------
 # Documentacao do sistema
@@ -79,7 +56,8 @@ Para gerar uma nova documentação doxygen basta executar
 
 bin/		- diretorio contendo os arquivos binarios executaveis
 
-docs/		- diretorio contendo a documentacao referente ao projeto
+docs/		- diretorio contendo a documentacao e documentos necessários
+		  para a execução do software (pag_processo_N)
 
 include/	- diretorio contendo arquivos de interface
 

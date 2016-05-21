@@ -39,10 +39,13 @@ void encerraServidor()
 {
     int estado; //Estado de encerramento do processo filho
     
-    printf("Encerrando servidor...\n");
-    
     //Se for o filho, encerramos
     if (pid == 0) exit(0);
+    
+    printf("Encerrando servidor...\n");
+    
+    //TODO - IMPRIMIR DADOS DO ESTADO ATUAL DO PROGRAMA (LISTA DE PAGE_FAULTS E TABELA)
+    //PARA COELINHA
     
     //Encerramos o processo filho
     kill(pid, SIGKILL);
@@ -57,8 +60,6 @@ void encerraServidor()
     //Liberamos a fila de mensagens
     msgctl(msg_usu_id, IPC_RMID, 0);
     msgctl(msg_aloc_id, IPC_RMID, 0);
-    
-    //TODO - IMPRIMIR DADOS DO ESTADO ATUAL DO PROGRAMA (LISTA DE PAGE_FAULTS E TABELA)
     
     //Encerramos o processo atual
     exit(0);

@@ -1,0 +1,116 @@
+\hypertarget{_e___s_e_m_a_f_o_r_o_8c}{}\section{Referência do Arquivo src/\+E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.c}
+\label{_e___s_e_m_a_f_o_r_o_8c}\index{src/\+E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{src/\+E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}}
+{\ttfamily \#include \char`\"{}../include/\+E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e___s_e_m_a_f_o_r_o_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_e___s_e_m_a_f_o_r_o_8c_a12104bf7efef12d00518762a035167d4}{M\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_e___s_e_m_a_f_o_r_o_8c_a3c6798cf05f9a2641485e7eb0a85be13}{inicializa\+Conj\+Semaforo} (int chave, int nsems, int valor\+\_\+inicial)
+\item 
+int \hyperlink{_e___s_e_m_a_f_o_r_o_8c_acc8af0d0877bcae3dada535fb68a99ba}{remove\+Conj\+Semaforo} (int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid})
+\item 
+int \hyperlink{_e___s_e_m_a_f_o_r_o_8c_ae848fcded82e109673e3597ba6449b4b}{P} (int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid}, int sem\+\_\+num)
+\item 
+int \hyperlink{_e___s_e_m_a_f_o_r_o_8c_a0337fa0fb00480ea2e4bfc03163a8e10}{V} (int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid}, int sem\+\_\+num)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8c_a12104bf7efef12d00518762a035167d4}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}!M\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O@{M\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O}}
+\index{M\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O@{M\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}}
+\subsubsection[{M\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O}\label{_e___s_e_m_a_f_o_r_o_8c_a12104bf7efef12d00518762a035167d4}
+
+
+\subsection{Funções}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8c_a3c6798cf05f9a2641485e7eb0a85be13}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}!inicializa\+Conj\+Semaforo@{inicializa\+Conj\+Semaforo}}
+\index{inicializa\+Conj\+Semaforo@{inicializa\+Conj\+Semaforo}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}}
+\subsubsection[{inicializa\+Conj\+Semaforo(int chave, int nsems, int valor\+\_\+inicial)}]{\setlength{\rightskip}{0pt plus 5cm}int inicializa\+Conj\+Semaforo (
+\begin{DoxyParamCaption}
+\item[{int}]{chave, }
+\item[{int}]{nsems, }
+\item[{int}]{valor\+\_\+inicial}
+\end{DoxyParamCaption}
+)}\label{_e___s_e_m_a_f_o_r_o_8c_a3c6798cf05f9a2641485e7eb0a85be13}
+Metodo responsavel por criar um conjunto de sem\+\_\+num semaforos com a chave e os valores iniciais passados como paramtero. As permissoes de acesso sao todas setadas.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em chave} & Chave para a criacao do conjunto de semaforos \\
+\hline
+{\em nsems} & Numero de semaforos no conjunto \\
+\hline
+{\em valor\+\_\+inicial} & Valor inicial de cada um dos semaforos do conjunto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+id semaforo, em caso de sucesso. -\/1, em caso de erro 
+\end{DoxyReturn}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8c_ae848fcded82e109673e3597ba6449b4b}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}!P@{P}}
+\index{P@{P}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}}
+\subsubsection[{P(int semid, int sem\+\_\+num)}]{\setlength{\rightskip}{0pt plus 5cm}int P (
+\begin{DoxyParamCaption}
+\item[{int}]{semid, }
+\item[{int}]{sem\+\_\+num}
+\end{DoxyParamCaption}
+)}\label{_e___s_e_m_a_f_o_r_o_8c_ae848fcded82e109673e3597ba6449b4b}
+Metodo responsavel por realizar a primitiva \hyperlink{_e___s_e_m_a_f_o_r_o_8h_ab47db526ad7b92be878653712cf41889}{P()} de Dijkstra. Quando o valor do semaforo for maior ou igual a 1, o valor dele eh decrementado. Caso contrario, bloqueia o processo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em semid} & id do conjunto de semaforos \\
+\hline
+{\em sem\+\_\+num} & numero do semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+0, em caso de sucesso, -\/1, em caso de erro 
+\end{DoxyReturn}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8c_acc8af0d0877bcae3dada535fb68a99ba}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}!remove\+Conj\+Semaforo@{remove\+Conj\+Semaforo}}
+\index{remove\+Conj\+Semaforo@{remove\+Conj\+Semaforo}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}}
+\subsubsection[{remove\+Conj\+Semaforo(int semid)}]{\setlength{\rightskip}{0pt plus 5cm}int remove\+Conj\+Semaforo (
+\begin{DoxyParamCaption}
+\item[{int}]{semid}
+\end{DoxyParamCaption}
+)}\label{_e___s_e_m_a_f_o_r_o_8c_acc8af0d0877bcae3dada535fb68a99ba}
+Metodo responsavel por remover um conjunto de semaforos
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em semid} & id do conjunto de semaforos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O, em caso de sucesso. -\/1, em caso de erro 
+\end{DoxyReturn}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8c_a0337fa0fb00480ea2e4bfc03163a8e10}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}!V@{V}}
+\index{V@{V}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+c}}
+\subsubsection[{V(int semid, int sem\+\_\+num)}]{\setlength{\rightskip}{0pt plus 5cm}int V (
+\begin{DoxyParamCaption}
+\item[{int}]{semid, }
+\item[{int}]{sem\+\_\+num}
+\end{DoxyParamCaption}
+)}\label{_e___s_e_m_a_f_o_r_o_8c_a0337fa0fb00480ea2e4bfc03163a8e10}
+Metodo responsavel por realizar a primitiva \hyperlink{_e___s_e_m_a_f_o_r_o_8h_a0fc28ce37e9beac005cfbe8cf50095da}{V()} de Dijkstra. O valor do semaforo eh incrementado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em semid} & id do conjunto de semaforos \\
+\hline
+{\em sem\+\_\+num} & numero do semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+0, em caso de sucesso, -\/1, em caso de erro 
+\end{DoxyReturn}

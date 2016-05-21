@@ -83,7 +83,7 @@ int servicoAlocacaoPaginas(int msg_aloc_id, int msg_user_id, TabFrames* tab_fram
         
         //Verifica se a pagina i ja possui um page frame reservado
         //Se sim, nao ocorreu page fault
-        if (buscaPagina(tab_frames, msg->num) > 0){
+        if (buscaPagina(tab_frames, msg->num) >= 0){
             
             //Notificamos o usuario
             Mensagem* resposta = inicializaMensagem();

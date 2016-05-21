@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4432FB281CE9507100A60694 /* E_MENSAGEM.c in Sources */ = {isa = PBXBuildFile; fileRef = 4432FB261CE9507100A60694 /* E_MENSAGEM.c */; };
-		4432FB2B1CE950F800A60694 /* E_TABFRAMES.c in Sources */ = {isa = PBXBuildFile; fileRef = 4432FB2A1CE950F800A60694 /* E_TABFRAMES.c */; };
-		44CF62A31CEBFA240042A5D6 /* E_SEMAFORO.c in Sources */ = {isa = PBXBuildFile; fileRef = 44CF62A11CEBFA240042A5D6 /* E_SEMAFORO.c */; };
+		4432FB281CE9507100A60694 /* M_MENSAGEM.c in Sources */ = {isa = PBXBuildFile; fileRef = 4432FB261CE9507100A60694 /* M_MENSAGEM.c */; };
+		4432FB2B1CE950F800A60694 /* M_TABFRAMES.c in Sources */ = {isa = PBXBuildFile; fileRef = 4432FB2A1CE950F800A60694 /* M_TABFRAMES.c */; };
+		44CF62A31CEBFA240042A5D6 /* M_SEMAFORO.c in Sources */ = {isa = PBXBuildFile; fileRef = 44CF62A11CEBFA240042A5D6 /* M_SEMAFORO.c */; };
 		CE0417411CE5543D00766FB8 /* M_SERVMEM.c in Sources */ = {isa = PBXBuildFile; fileRef = CE0417401CE5543D00766FB8 /* M_SERVMEM.c */; };
 		CE0417461CE55F9B00766FB8 /* M_ALOCPAG.c in Sources */ = {isa = PBXBuildFile; fileRef = CE0417451CE55F9B00766FB8 /* M_ALOCPAG.c */; };
 		CE0417491CE55FB700766FB8 /* M_SUBSPAG.c in Sources */ = {isa = PBXBuildFile; fileRef = CE0417471CE55FB700766FB8 /* M_SUBSPAG.c */; };
@@ -28,12 +28,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4432FB261CE9507100A60694 /* E_MENSAGEM.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = E_MENSAGEM.c; sourceTree = "<group>"; };
+		4432FB261CE9507100A60694 /* M_MENSAGEM.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = M_MENSAGEM.c; sourceTree = "<group>"; };
 		4432FB291CE950B100A60694 /* E_MENSAGEM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E_MENSAGEM.h; sourceTree = "<group>"; };
-		4432FB2A1CE950F800A60694 /* E_TABFRAMES.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = E_TABFRAMES.c; sourceTree = "<group>"; };
+		4432FB2A1CE950F800A60694 /* M_TABFRAMES.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = M_TABFRAMES.c; sourceTree = "<group>"; };
 		4432FB2C1CE9511200A60694 /* E_TABFRAMES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E_TABFRAMES.h; sourceTree = "<group>"; };
 		445191061CEBE05E00CA76D5 /* E_SEMAFORO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E_SEMAFORO.h; sourceTree = "<group>"; };
-		44CF62A11CEBFA240042A5D6 /* E_SEMAFORO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = E_SEMAFORO.c; sourceTree = "<group>"; };
+		44CF62A11CEBFA240042A5D6 /* M_SEMAFORO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = M_SEMAFORO.c; sourceTree = "<group>"; };
 		CE04171C1CE5529800766FB8 /* ServidorMemoria */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ServidorMemoria; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0417401CE5543D00766FB8 /* M_SERVMEM.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = M_SERVMEM.c; sourceTree = "<group>"; };
 		CE0417431CE55E3100766FB8 /* I_ALOCPAG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I_ALOCPAG.h; sourceTree = "<group>"; };
@@ -84,9 +84,9 @@
 				CE0417401CE5543D00766FB8 /* M_SERVMEM.c */,
 				CE0417451CE55F9B00766FB8 /* M_ALOCPAG.c */,
 				CE0417471CE55FB700766FB8 /* M_SUBSPAG.c */,
-				4432FB261CE9507100A60694 /* E_MENSAGEM.c */,
-				4432FB2A1CE950F800A60694 /* E_TABFRAMES.c */,
-				44CF62A11CEBFA240042A5D6 /* E_SEMAFORO.c */,
+				4432FB261CE9507100A60694 /* M_MENSAGEM.c */,
+				4432FB2A1CE950F800A60694 /* M_TABFRAMES.c */,
+				44CF62A11CEBFA240042A5D6 /* M_SEMAFORO.c */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -161,9 +161,9 @@
 			files = (
 				CE0417491CE55FB700766FB8 /* M_SUBSPAG.c in Sources */,
 				CE0417411CE5543D00766FB8 /* M_SERVMEM.c in Sources */,
-				4432FB281CE9507100A60694 /* E_MENSAGEM.c in Sources */,
-				44CF62A31CEBFA240042A5D6 /* E_SEMAFORO.c in Sources */,
-				4432FB2B1CE950F800A60694 /* E_TABFRAMES.c in Sources */,
+				4432FB281CE9507100A60694 /* M_MENSAGEM.c in Sources */,
+				44CF62A31CEBFA240042A5D6 /* M_SEMAFORO.c in Sources */,
+				4432FB2B1CE950F800A60694 /* M_TABFRAMES.c in Sources */,
 				CE0417461CE55F9B00766FB8 /* M_ALOCPAG.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

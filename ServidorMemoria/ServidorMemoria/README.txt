@@ -6,44 +6,23 @@
 #############################################################################
 
 #----------------------------------------------------------------------------
-# Suporte
-#----------------------------------------------------------------------------
-
-Suporte somente aos seguintes métodos de bibliotecas java:
-
-	java/io/PrintStream.println
-	java/lang/StringBuffer.toString
-	java/lang/StringBuffer.append
-
-#----------------------------------------------------------------------------
 # Compilação e execucao
 #----------------------------------------------------------------------------
 
-Para compilar digite:
+# Para compilar:
 
-	Em sistemas unix:
-		$ make all_unix
+	$ make all
 
-	Em sistemas Windows:
-		$ make all_win
+# Para inicializar o servidor:
+	
+	$ ./servMem 
+	ou
+	$ ./bin/servMem
+	
+# Para encerrar o servidor:
+	
+	$ ./shutdown.sh
 
-
-Para executar digite:
-
-	Em sistemas unix:
-		$ /.jvm <arquivo_class> <String de caracteres>
-
-		ou
-
-		$ .jvm <arquivo_class> <String de caracteres>
-
-		exemplo
-
-		$ ./jvm docs/HelloWorld.class bla bla bla
-
-
-	Em sistemas Windows:
-		$. a.exe <arquivo_entrada> <String de caracteres>
 
 
 
@@ -79,7 +58,8 @@ Para gerar uma nova documentação doxygen basta executar
 
 bin/		- diretorio contendo os arquivos binarios executaveis
 
-docs/		- diretorio contendo a documentacao referente ao projeto
+docs/		- diretorio contendo a documentacao e arquivos necessarios 
+		  a execucao do software
 
 include/	- diretorio contendo arquivos de interface
 

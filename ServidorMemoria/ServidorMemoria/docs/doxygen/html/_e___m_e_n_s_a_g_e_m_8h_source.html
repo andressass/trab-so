@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>„ServidordeMemoriaVirtual“: Código-Fonte de include/E_MENSAGEM.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">„ServidordeMemoriaVirtual“
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">E_MENSAGEM.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_e___m_e_n_s_a_g_e_m_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#################################################################################################</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span><span class="comment">//##################################################################################################</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef E_MENSAGEM_h</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define E_MENSAGEM_h</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifdef M_MENSAGEM</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define EXT3</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_e___m_e_n_s_a_g_e_m_8h.html#ac39da83b60c64c028dc886f0e97f1d8d">   16</a></span>&#160;<span class="preprocessor">#define EXT3 extern</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;sys/ipc.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;sys/msg.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Definicoes</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="_e___m_e_n_s_a_g_e_m_8h.html#a430964ddbf255bb5305cb4d183f7aeaa">   30</a></span>&#160;<span class="preprocessor">#define KEY_T0 0x398801 </span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="_e___m_e_n_s_a_g_e_m_8h.html#ad839b4de8d1726d14f7aa96520d63a75">   31</a></span>&#160;<span class="preprocessor">#define KEY_T1 0x539712 </span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// Estruturas</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structmensagem.html">   42</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structmensagem.html">mensagem</a>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structmensagem.html#a0c2d7145cc186c97a721bf6cc00576be">   43</a></span>&#160;    <span class="keywordtype">long</span> <a class="code" href="structmensagem.html#a0c2d7145cc186c97a721bf6cc00576be">pid</a>; <span class="comment">//&lt;! pid do processo que enviou a mensagem</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structmensagem.html#ae517cd66c376c75e1a242660e3892184">   44</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structmensagem.html#ae517cd66c376c75e1a242660e3892184">num</a>; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;} <a class="code" href="_e___m_e_n_s_a_g_e_m_8h.html#a7f28ef2afbad397da434a1a718a4b45a">Mensagem</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// Metodos</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span><a class="code" href="_e___m_e_n_s_a_g_e_m_8h.html#ac39da83b60c64c028dc886f0e97f1d8d">EXT3</a> <a class="code" href="structmensagem.html">Mensagem</a>* <a class="code" href="_e___m_e_n_s_a_g_e_m_8h.html#a143bdae44a46870072f74ef55d0980cc">inicializaMensagem</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* E_MENSAGEM_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="structmensagem_html_ae517cd66c376c75e1a242660e3892184"><div class="ttname"><a href="structmensagem.html#ae517cd66c376c75e1a242660e3892184">mensagem::num</a></div><div class="ttdeci">int num</div><div class="ttdoc">Numero da pagina ou frame. </div><div class="ttdef"><b>Definition:</b> E_MENSAGEM.h:44</div></div>
+<div class="ttc" id="_e___m_e_n_s_a_g_e_m_8h_html_a7f28ef2afbad397da434a1a718a4b45a"><div class="ttname"><a href="_e___m_e_n_s_a_g_e_m_8h.html#a7f28ef2afbad397da434a1a718a4b45a">Mensagem</a></div><div class="ttdeci">struct mensagem Mensagem</div><div class="ttdoc">Estrutura de mensagem. </div></div>
+<div class="ttc" id="structmensagem_html"><div class="ttname"><a href="structmensagem.html">mensagem</a></div><div class="ttdoc">Estrutura de mensagem. </div><div class="ttdef"><b>Definition:</b> E_MENSAGEM.h:42</div></div>
+<div class="ttc" id="_e___m_e_n_s_a_g_e_m_8h_html_a143bdae44a46870072f74ef55d0980cc"><div class="ttname"><a href="_e___m_e_n_s_a_g_e_m_8h.html#a143bdae44a46870072f74ef55d0980cc">inicializaMensagem</a></div><div class="ttdeci">EXT3 Mensagem * inicializaMensagem()</div><div class="ttdef"><b>Definition:</b> M_MENSAGEM.c:16</div></div>
+<div class="ttc" id="structmensagem_html_a0c2d7145cc186c97a721bf6cc00576be"><div class="ttname"><a href="structmensagem.html#a0c2d7145cc186c97a721bf6cc00576be">mensagem::pid</a></div><div class="ttdeci">long pid</div><div class="ttdef"><b>Definition:</b> E_MENSAGEM.h:43</div></div>
+<div class="ttc" id="_e___m_e_n_s_a_g_e_m_8h_html_ac39da83b60c64c028dc886f0e97f1d8d"><div class="ttname"><a href="_e___m_e_n_s_a_g_e_m_8h.html#ac39da83b60c64c028dc886f0e97f1d8d">EXT3</a></div><div class="ttdeci">#define EXT3</div><div class="ttdef"><b>Definition:</b> E_MENSAGEM.h:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

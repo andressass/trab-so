@@ -1,0 +1,181 @@
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h}{}\section{Referência do Arquivo include/\+E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.h}
+\label{_e___s_e_m_a_f_o_r_o_8h}\index{include/\+E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{include/\+E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+
+
+Interface dos semaforos de Dijkstra.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/ipc.\+h$>$}\\*
+{\ttfamily \#include $<$sys/sem.\+h$>$}\\*
+Gráfico de dependência de inclusões para E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e___s_e_m_a_f_o_r_o_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e___s_e_m_a_f_o_r_o_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_e___s_e_m_a_f_o_r_o_8h_adfd8fc2ebfd88ebc20b3e9b751563f9a}{E\+X\+T5}~extern
+\item 
+\#define \hyperlink{_e___s_e_m_a_f_o_r_o_8h_af52ff7650cd71709aa23e2b63fdde501}{N\+S\+E\+M\+S}~3
+\begin{DoxyCompactList}\small\item\em Numero total de semaforos. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___s_e_m_a_f_o_r_o_8h_a2cf3c22d8cacfe663a4eec13d0fb26ef}{M\+U\+T\+E\+X}~0
+\begin{DoxyCompactList}\small\item\em Semaforo mutex. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___s_e_m_a_f_o_r_o_8h_a577c31209373ea3b468a96ca4071732b}{S\+O\+L\+I\+C\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G}~1
+\begin{DoxyCompactList}\small\item\em Semaforo de solicitacao de liberacao de paginas. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___s_e_m_a_f_o_r_o_8h_a7f1f363e121023304f364eaeb3cdbdb7}{R\+E\+S\+P\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G}~2
+\begin{DoxyCompactList}\small\item\em Semaforo de confirmacao de liberacao de paginas. \end{DoxyCompactList}\item 
+\#define \hyperlink{_e___s_e_m_a_f_o_r_o_8h_a6765f786cd905b533445e0f17612a64f}{K\+E\+Y\+\_\+\+S\+E\+M0}~0x539880
+\begin{DoxyCompactList}\small\item\em Chave para criacao do semaforo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_e___s_e_m_a_f_o_r_o_8h_adfd8fc2ebfd88ebc20b3e9b751563f9a}{E\+X\+T5} int \hyperlink{_e___s_e_m_a_f_o_r_o_8h_a41d4a23bd58573d441a27851e986b48a}{inicializa\+Conj\+Semaforo} (int chave, int nsems, int valor\+\_\+inicial)
+\item 
+\hyperlink{_e___s_e_m_a_f_o_r_o_8h_adfd8fc2ebfd88ebc20b3e9b751563f9a}{E\+X\+T5} int \hyperlink{_e___s_e_m_a_f_o_r_o_8h_a464823e20c8d4c8cc2e7b25756d2aa57}{remove\+Conj\+Semaforo} (int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid})
+\item 
+\hyperlink{_e___s_e_m_a_f_o_r_o_8h_adfd8fc2ebfd88ebc20b3e9b751563f9a}{E\+X\+T5} int \hyperlink{_e___s_e_m_a_f_o_r_o_8h_ab47db526ad7b92be878653712cf41889}{P} (int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid}, int sem\+\_\+num)
+\item 
+\hyperlink{_e___s_e_m_a_f_o_r_o_8h_adfd8fc2ebfd88ebc20b3e9b751563f9a}{E\+X\+T5} int \hyperlink{_e___s_e_m_a_f_o_r_o_8h_a0fc28ce37e9beac005cfbe8cf50095da}{V} (int \hyperlink{_m___s_e_r_v_m_e_m_8c_a7c35ac5305085cf7360645b8d52988b5}{semid}, int sem\+\_\+num)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface dos semaforos de Dijkstra. 
+
+Interface responsavel por disponibilizar servicos responsaveis pela manipulacao dos semaforos de Dijkstra. 
+
+\subsection{Definições e macros}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_adfd8fc2ebfd88ebc20b3e9b751563f9a}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!E\+X\+T5@{E\+X\+T5}}
+\index{E\+X\+T5@{E\+X\+T5}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{E\+X\+T5}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T5~extern}\label{_e___s_e_m_a_f_o_r_o_8h_adfd8fc2ebfd88ebc20b3e9b751563f9a}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_a6765f786cd905b533445e0f17612a64f}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!K\+E\+Y\+\_\+\+S\+E\+M0@{K\+E\+Y\+\_\+\+S\+E\+M0}}
+\index{K\+E\+Y\+\_\+\+S\+E\+M0@{K\+E\+Y\+\_\+\+S\+E\+M0}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{K\+E\+Y\+\_\+\+S\+E\+M0}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+E\+Y\+\_\+\+S\+E\+M0~0x539880}\label{_e___s_e_m_a_f_o_r_o_8h_a6765f786cd905b533445e0f17612a64f}
+
+
+Chave para criacao do semaforo. 
+
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_a2cf3c22d8cacfe663a4eec13d0fb26ef}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!M\+U\+T\+E\+X@{M\+U\+T\+E\+X}}
+\index{M\+U\+T\+E\+X@{M\+U\+T\+E\+X}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{M\+U\+T\+E\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+T\+E\+X~0}\label{_e___s_e_m_a_f_o_r_o_8h_a2cf3c22d8cacfe663a4eec13d0fb26ef}
+
+
+Semaforo mutex. 
+
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_af52ff7650cd71709aa23e2b63fdde501}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!N\+S\+E\+M\+S@{N\+S\+E\+M\+S}}
+\index{N\+S\+E\+M\+S@{N\+S\+E\+M\+S}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{N\+S\+E\+M\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+S\+E\+M\+S~3}\label{_e___s_e_m_a_f_o_r_o_8h_af52ff7650cd71709aa23e2b63fdde501}
+
+
+Numero total de semaforos. 
+
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_a7f1f363e121023304f364eaeb3cdbdb7}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!R\+E\+S\+P\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G@{R\+E\+S\+P\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G}}
+\index{R\+E\+S\+P\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G@{R\+E\+S\+P\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{R\+E\+S\+P\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+S\+P\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G~2}\label{_e___s_e_m_a_f_o_r_o_8h_a7f1f363e121023304f364eaeb3cdbdb7}
+
+
+Semaforo de confirmacao de liberacao de paginas. 
+
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_a577c31209373ea3b468a96ca4071732b}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!S\+O\+L\+I\+C\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G@{S\+O\+L\+I\+C\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G}}
+\index{S\+O\+L\+I\+C\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G@{S\+O\+L\+I\+C\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{S\+O\+L\+I\+C\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+L\+I\+C\+\_\+\+L\+I\+B\+\_\+\+P\+A\+G~1}\label{_e___s_e_m_a_f_o_r_o_8h_a577c31209373ea3b468a96ca4071732b}
+
+
+Semaforo de solicitacao de liberacao de paginas. 
+
+
+
+\subsection{Funções}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_a41d4a23bd58573d441a27851e986b48a}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!inicializa\+Conj\+Semaforo@{inicializa\+Conj\+Semaforo}}
+\index{inicializa\+Conj\+Semaforo@{inicializa\+Conj\+Semaforo}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{inicializa\+Conj\+Semaforo(int chave, int nsems, int valor\+\_\+inicial)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T5} int inicializa\+Conj\+Semaforo (
+\begin{DoxyParamCaption}
+\item[{int}]{chave, }
+\item[{int}]{nsems, }
+\item[{int}]{valor\+\_\+inicial}
+\end{DoxyParamCaption}
+)}\label{_e___s_e_m_a_f_o_r_o_8h_a41d4a23bd58573d441a27851e986b48a}
+Metodo responsavel por criar um conjunto de sem\+\_\+num semaforos com a chave e os valores iniciais passados como paramtero. As permissoes de acesso sao todas setadas.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em chave} & Chave para a criacao do conjunto de semaforos \\
+\hline
+{\em nsems} & Numero de semaforos no conjunto \\
+\hline
+{\em valor\+\_\+inicial} & Valor inicial de cada um dos semaforos do conjunto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+id semaforo, em caso de sucesso. -\/1, em caso de erro 
+\end{DoxyReturn}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_ab47db526ad7b92be878653712cf41889}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!P@{P}}
+\index{P@{P}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{P(int semid, int sem\+\_\+num)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T5} int P (
+\begin{DoxyParamCaption}
+\item[{int}]{semid, }
+\item[{int}]{sem\+\_\+num}
+\end{DoxyParamCaption}
+)}\label{_e___s_e_m_a_f_o_r_o_8h_ab47db526ad7b92be878653712cf41889}
+Metodo responsavel por realizar a primitiva \hyperlink{_e___s_e_m_a_f_o_r_o_8h_ab47db526ad7b92be878653712cf41889}{P()} de Dijkstra. Quando o valor do semaforo for maior ou igual a 1, o valor dele eh decrementado. Caso contrario, bloqueia o processo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em semid} & id do conjunto de semaforos \\
+\hline
+{\em sem\+\_\+num} & numero do semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+0, em caso de sucesso, -\/1, em caso de erro 
+\end{DoxyReturn}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_a464823e20c8d4c8cc2e7b25756d2aa57}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!remove\+Conj\+Semaforo@{remove\+Conj\+Semaforo}}
+\index{remove\+Conj\+Semaforo@{remove\+Conj\+Semaforo}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{remove\+Conj\+Semaforo(int semid)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T5} int remove\+Conj\+Semaforo (
+\begin{DoxyParamCaption}
+\item[{int}]{semid}
+\end{DoxyParamCaption}
+)}\label{_e___s_e_m_a_f_o_r_o_8h_a464823e20c8d4c8cc2e7b25756d2aa57}
+Metodo responsavel por remover um conjunto de semaforos
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em semid} & id do conjunto de semaforos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O, em caso de sucesso. -\/1, em caso de erro 
+\end{DoxyReturn}
+\hypertarget{_e___s_e_m_a_f_o_r_o_8h_a0fc28ce37e9beac005cfbe8cf50095da}{}\index{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}!V@{V}}
+\index{V@{V}!E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h@{E\+\_\+\+S\+E\+M\+A\+F\+O\+R\+O.\+h}}
+\subsubsection[{V(int semid, int sem\+\_\+num)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T5} int V (
+\begin{DoxyParamCaption}
+\item[{int}]{semid, }
+\item[{int}]{sem\+\_\+num}
+\end{DoxyParamCaption}
+)}\label{_e___s_e_m_a_f_o_r_o_8h_a0fc28ce37e9beac005cfbe8cf50095da}
+Metodo responsavel por realizar a primitiva \hyperlink{_e___s_e_m_a_f_o_r_o_8h_a0fc28ce37e9beac005cfbe8cf50095da}{V()} de Dijkstra. O valor do semaforo eh incrementado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em semid} & id do conjunto de semaforos \\
+\hline
+{\em sem\+\_\+num} & numero do semaforo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+0, em caso de sucesso, -\/1, em caso de erro 
+\end{DoxyReturn}

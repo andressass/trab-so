@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>„ServidordeMemoriaVirtual“: Código-Fonte de include/I_ALOCPAG.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">„ServidordeMemoriaVirtual“
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">I_ALOCPAG.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i___a_l_o_c_p_a_g_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#################################################################################################</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span><span class="comment">//##################################################################################################</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef I_ALOCPAG_h</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define I_ALOCPAG_h</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef M_ALOCPAG</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define EXT1</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_i___a_l_o_c_p_a_g_8h.html#a1b19fbdd3be23e1bca939f6a02fb9223">   17</a></span>&#160;<span class="preprocessor">#define EXT1 extern</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_e___m_e_n_s_a_g_e_m_8h.html">E_MENSAGEM.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_e___t_a_b_f_r_a_m_e_s_8h.html">E_TABFRAMES.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_e___s_e_m_a_f_o_r_o_8h.html">E_SEMAFORO.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span><a class="code" href="_i___a_l_o_c_p_a_g_8h.html#a1b19fbdd3be23e1bca939f6a02fb9223">EXT1</a> <span class="keywordtype">int</span> <a class="code" href="_i___a_l_o_c_p_a_g_8h.html#a956c43a9fa862b1f4f5a577169eef5a3">servicoAlocacaoPaginas</a>(<span class="keywordtype">int</span> <a class="code" href="_m___s_e_r_v_m_e_m_8c.html#a88878a2af8d822b257daf3145a09b725">msg_aloc_id</a>, <span class="keywordtype">int</span> msg_user_id, <a class="code" href="structtabela_frames.html">TabFrames</a>* tab_frames, <span class="keywordtype">int</span> <a class="code" href="_m___s_e_r_v_m_e_m_8c.html#a7c35ac5305085cf7360645b8d52988b5">semid</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* I_ALOCPAG_h */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="_m___s_e_r_v_m_e_m_8c_html_a88878a2af8d822b257daf3145a09b725"><div class="ttname"><a href="_m___s_e_r_v_m_e_m_8c.html#a88878a2af8d822b257daf3145a09b725">msg_aloc_id</a></div><div class="ttdeci">int msg_aloc_id</div><div class="ttdoc">id das filas de mensagem de entrada do alocador </div><div class="ttdef"><b>Definition:</b> M_SERVMEM.c:27</div></div>
+<div class="ttc" id="_i___a_l_o_c_p_a_g_8h_html_a956c43a9fa862b1f4f5a577169eef5a3"><div class="ttname"><a href="_i___a_l_o_c_p_a_g_8h.html#a956c43a9fa862b1f4f5a577169eef5a3">servicoAlocacaoPaginas</a></div><div class="ttdeci">EXT1 int servicoAlocacaoPaginas(int msg_aloc_id, int msg_user_id, TabFrames *tab_frames, int semid)</div><div class="ttdef"><b>Definition:</b> M_ALOCPAG.c:71</div></div>
+<div class="ttc" id="_e___t_a_b_f_r_a_m_e_s_8h_html"><div class="ttname"><a href="_e___t_a_b_f_r_a_m_e_s_8h.html">E_TABFRAMES.h</a></div><div class="ttdoc">Interface de estrutura da tabela de frames. </div></div>
+<div class="ttc" id="_e___s_e_m_a_f_o_r_o_8h_html"><div class="ttname"><a href="_e___s_e_m_a_f_o_r_o_8h.html">E_SEMAFORO.h</a></div><div class="ttdoc">Interface dos semaforos de Dijkstra. </div></div>
+<div class="ttc" id="structtabela_frames_html"><div class="ttname"><a href="structtabela_frames.html">tabelaFrames</a></div><div class="ttdoc">Estrutura de tabela de frames. </div><div class="ttdef"><b>Definition:</b> E_TABFRAMES.h:52</div></div>
+<div class="ttc" id="_m___s_e_r_v_m_e_m_8c_html_a7c35ac5305085cf7360645b8d52988b5"><div class="ttname"><a href="_m___s_e_r_v_m_e_m_8c.html#a7c35ac5305085cf7360645b8d52988b5">semid</a></div><div class="ttdeci">int semid</div><div class="ttdoc">id do conjunto semaforos; </div><div class="ttdef"><b>Definition:</b> M_SERVMEM.c:30</div></div>
+<div class="ttc" id="_i___a_l_o_c_p_a_g_8h_html_a1b19fbdd3be23e1bca939f6a02fb9223"><div class="ttname"><a href="_i___a_l_o_c_p_a_g_8h.html#a1b19fbdd3be23e1bca939f6a02fb9223">EXT1</a></div><div class="ttdeci">#define EXT1</div><div class="ttdef"><b>Definition:</b> I_ALOCPAG.h:17</div></div>
+<div class="ttc" id="_e___m_e_n_s_a_g_e_m_8h_html"><div class="ttname"><a href="_e___m_e_n_s_a_g_e_m_8h.html">E_MENSAGEM.h</a></div><div class="ttdoc">Interface de estrutura de mensagens. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>
