@@ -26,7 +26,7 @@
 int pid; //!< id do processo atual
 
 int msg_aloc_id; //!< id das filas de mensagem de entrada do alocador
-int msg_usu_id; //!< id das filas de mensagem de notificacao dos usuarios
+int msg_user_id; //!< id das filas de mensagem de notificacao dos usuarios
 int shmid; //!< id da area de memoria compartilhada da tabela de frames
 int semid; //!< id do conjunto semaforos;
 
@@ -60,7 +60,7 @@ void encerraServidor()
     removeConjSemaforo(semid);
     
     //Liberamos a fila de mensagens
-    msgctl(msg_usu_id, IPC_RMID, 0);
+    msgctl(msg_user_id, IPC_RMID, 0);
     msgctl(msg_aloc_id, IPC_RMID, 0);
     
     //Encerramos o processo atual
@@ -86,11 +86,11 @@ int main(int argc, const char * argv[])
     }
     
     //Criacao das filas de mensagens dos processos de alocacao e substituicao de paginas
-    msg_aloc_id = msgget(KEY_T0, IPC_CREAT | 0660);
-    msg_usu_id = msgget(KEY_T1, IPC_CREAT | 0660);
+    msg_aloc_id = msgget(KEY_T0, IPC_CREAT | 0x1FF);
+    msg_user_id = msgget(KEY_T1, IPC_CREAT | 0x1FF);
     
     //Verificamos se houve erro na criacao das filas de mensagens
-    if (msg_usu_id < 0 || msg_aloc_id < 0) {
+    if (msg_user_id < 0 || msg_aloc_id < 0) {
         printf("Erro na criacao de filas de mensagem. Encerrando servidor...\n");
         exit(1);
     }
@@ -106,7 +106,7 @@ int main(int argc, const char * argv[])
     if (pid == 0) servicoSubstuicaoPaginas(tabFrames, semid);
     
     //Execucao do processo de alocacao de paginas
-    else servicoAlocacaoPaginas(tabFrames, semid);
+    else servicoAlocacaoPaginas(msg_aloc_id, msg_user_id, tabFrames, semid);
     
     printf("\nErro no alocador!\n");
     encerraServidor();

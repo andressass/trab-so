@@ -36,6 +36,6 @@
  * \param semid id do conjunto de semaforos a ser utlizado
  * \return -1 se ocorreu erro
  */
-EXT1 int servicoAlocacaoPaginas(TabFrames* tab_frames, int semid);
+EXT1 int servicoAlocacaoPaginas(int msg_aloc_id, int msg_user_id, TabFrames* tab_frames, int semid);
 
 #endif /* I_ALOCPAG_h */

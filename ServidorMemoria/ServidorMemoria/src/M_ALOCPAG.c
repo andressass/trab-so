@@ -68,21 +68,11 @@ int alocaPagina(TabFrames* tab_frames, int pag_num){
 
 
 //--------------------------------------------------------------------------------------------------
-int servicoAlocacaoPaginas(TabFrames* tab_frames, int semid){
+int servicoAlocacaoPaginas(int msg_aloc_id, int msg_user_id, TabFrames* tab_frames, int semid){
     Mensagem* msg;  
     
+    
     V(semid, MUTEX); //Setamos mutex = 1
-    
-    //Obtemos as filas de mensagens
-    int msg_aloc_id = msgget(KEY_T0, 0660);
-    int msg_user_id = msgget(KEY_T1, 0660);
-    
-    //Verificamos se houve erro na criacao das filas de mensagens
-    if (msg_user_id < 0 || msg_aloc_id < 0) {
-        printf("Erro na obtencao de filas de mensagem. Encerrando servidor...\n");
-        exit(1);
-    }
-    
     
     while (1) {
         //Recebe mensagem (ou aguarda até receber)
@@ -110,7 +100,7 @@ int servicoAlocacaoPaginas(TabFrames* tab_frames, int semid){
             if (tab_frames->frames_ocupados >= MAX_OCUPACAO){
                 
                 //Se sim,
-                V(semid, SOLIC_LIB_PAG); //Solicita libracao de paginas
+                V(semid, SOLIC_LIB_PAG); //Solicita liberacao de paginas
                 
                 V(semid, MUTEX); //Sai da secao critica
                 
