@@ -18,6 +18,7 @@
 #include "../include/E_MENSAGEM.h"
 #include "../include/E_TABFRAMES.h"
 #include "../include/E_SEMAFORO.h"
+#include "../include/E_LISTA.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -30,6 +31,7 @@ int shmid; //!< id da area de memoria compartilhada da tabela de frames
 int semid; //!< id do conjunto semaforos;
 
 TabFrames* tabFrames; //!< ponteiro para a tabela de frames
+Lista* lista; //!Lista contendo os resultados do alocador
 
 //--------------------------------------------------------------------------------------------------
 /*!
@@ -74,17 +76,18 @@ void encerraServidor()
 int main(int argc, const char * argv[])
 {
     
-    
     //Se receber a notificacao de encerramento, desviamos para a rotina de termino.
     signal(SIGUSR1, encerraServidor);
     
     //Criamos e inicializamos a tabela de frames
-    if ((shmid = inicializaTabFrames(KEY_TAB0, &tabFrames)) < 0)
+    if ((shmid = inicializaTabFrames(KEY_TAB0, &tabFrames)) < 0){
         printf("Erro ao criar tabela de frames.Encerrando servidor...\n");
+        exit(1);
+    }
     
     //Criacao das filas de mensagens dos processos de alocacao e substituicao de paginas
-    msg_aloc_id = msgget(KEY_T0, IPC_CREAT | 0x1FF);
-    msg_usu_id = msgget(KEY_T1, IPC_CREAT | 0x1FF);
+    msg_aloc_id = msgget(KEY_T0, IPC_CREAT | 0660);
+    msg_usu_id = msgget(KEY_T1, IPC_CREAT | 0660);
     
     //Verificamos se houve erro na criacao das filas de mensagens
     if (msg_usu_id < 0 || msg_aloc_id < 0) {
@@ -103,8 +106,9 @@ int main(int argc, const char * argv[])
     if (pid == 0) servicoSubstuicaoPaginas(tabFrames, semid);
     
     //Execucao do processo de alocacao de paginas
-    else servicoAlocacaoPaginas(msg_aloc_id, msg_usu_id, tabFrames, semid);
+    else servicoAlocacaoPaginas(tabFrames, semid);
     
-    return 0;
+    printf("\nErro no alocador!\n");
+    encerraServidor();
     
 }

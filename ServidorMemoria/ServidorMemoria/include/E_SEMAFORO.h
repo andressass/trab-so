@@ -7,8 +7,8 @@
  */
 //##################################################################################################
 
-#ifndef SEMAFORO_h
-#define SEMAFORO_h
+#ifndef E_SEMAFORO_h
+#define E_SEMAFORO_h
 
 #ifdef M_SEMAFORO
 #define EXT5

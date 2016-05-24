@@ -13,6 +13,7 @@
 		CE0417411CE5543D00766FB8 /* M_SERVMEM.c in Sources */ = {isa = PBXBuildFile; fileRef = CE0417401CE5543D00766FB8 /* M_SERVMEM.c */; };
 		CE0417461CE55F9B00766FB8 /* M_ALOCPAG.c in Sources */ = {isa = PBXBuildFile; fileRef = CE0417451CE55F9B00766FB8 /* M_ALOCPAG.c */; };
 		CE0417491CE55FB700766FB8 /* M_SUBSPAG.c in Sources */ = {isa = PBXBuildFile; fileRef = CE0417471CE55FB700766FB8 /* M_SUBSPAG.c */; };
+		CE4AE11A1CF49035007B05A2 /* M_LISTA.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4AE1181CF49035007B05A2 /* M_LISTA.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		CE0417441CE55E6B00766FB8 /* I_SUBSPAG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I_SUBSPAG.h; sourceTree = "<group>"; };
 		CE0417451CE55F9B00766FB8 /* M_ALOCPAG.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = M_ALOCPAG.c; sourceTree = "<group>"; };
 		CE0417471CE55FB700766FB8 /* M_SUBSPAG.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = M_SUBSPAG.c; sourceTree = "<group>"; };
+		CE4AE1151CF48F21007B05A2 /* E_LISTA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E_LISTA.h; sourceTree = "<group>"; };
+		CE4AE1181CF49035007B05A2 /* M_LISTA.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = M_LISTA.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 				4432FB261CE9507100A60694 /* M_MENSAGEM.c */,
 				4432FB2A1CE950F800A60694 /* M_TABFRAMES.c */,
 				44CF62A11CEBFA240042A5D6 /* M_SEMAFORO.c */,
+				CE4AE1181CF49035007B05A2 /* M_LISTA.c */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -99,6 +103,7 @@
 				4432FB291CE950B100A60694 /* E_MENSAGEM.h */,
 				4432FB2C1CE9511200A60694 /* E_TABFRAMES.h */,
 				445191061CEBE05E00CA76D5 /* E_SEMAFORO.h */,
+				CE4AE1151CF48F21007B05A2 /* E_LISTA.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				CE0417411CE5543D00766FB8 /* M_SERVMEM.c in Sources */,
 				4432FB281CE9507100A60694 /* M_MENSAGEM.c in Sources */,
 				44CF62A31CEBFA240042A5D6 /* M_SEMAFORO.c in Sources */,
+				CE4AE11A1CF49035007B05A2 /* M_LISTA.c in Sources */,
 				4432FB2B1CE950F800A60694 /* M_TABFRAMES.c in Sources */,
 				CE0417461CE55F9B00766FB8 /* M_ALOCPAG.c in Sources */,
 			);

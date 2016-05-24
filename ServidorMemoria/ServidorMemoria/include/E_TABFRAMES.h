@@ -22,6 +22,7 @@
 #include <sys/ipc.h>
 #include <sys/shm.h>
 #include <sys/time.h>
+#include "E_LISTA.h"
 
 //--------------------------------------------------------------------------------------------------
 // Definicoes
