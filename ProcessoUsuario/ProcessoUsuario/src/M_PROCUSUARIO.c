@@ -81,15 +81,17 @@ int main(int argc, const char * argv[])
             //Converte o caracter obtido do arquivo para inteiro
             pag_ref_int = pag_ref_char - '0';
             //Referencia pagina
-            printf("%d", pag_ref_int);
             m1->pid = getpid();
             m1->num = pag_ref_int;
-            if(msgsnd(msg_aloc_id, m1, sizeof(Mensagem), 0) < 0)
+            if(msgsnd(msg_aloc_id, m1, sizeof(Mensagem), 0) < 0){
                 printf("Erro de envio mensagem\n\n");
+                exit(1);
+            }
             
-            if(msgrcv(msg_usu_id, m1, sizeof(Mensagem), getpid(), 0) < 0)
+            if(msgrcv(msg_usu_id, m1, sizeof(Mensagem), getpid(), 0) < 0){
                 printf("Erro de recebimento de mensagem\n\n");
-            else printf("\n\nUSUARIO: Recebi mensagem!!\n\n");
+                exit(1);
+            }
         }
         pag_ref_char = getc(fp);
     }

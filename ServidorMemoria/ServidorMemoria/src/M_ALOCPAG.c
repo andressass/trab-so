@@ -29,8 +29,8 @@ int _semid; //!< id do conjunto semaforos;
 int _msg_aloc_id; //!< id das filas de mensagem de entrada do alocador
 int _msg_user_id; //!< id das filas de mensagem de notificacao dos usuarios
 
-TabFrames* _tabFrames; //!< ponteiro para a tabela de frames
-Lista* listaResultados; //!< ponteiro a para lista que armazena o numero de page faults por pid
+TabFrames* _tab_frames; //!< ponteiro para a tabela de frames
+Lista* _lista_resultados; //!< ponteiro a para lista que armazena o numero de page faults por pid
 
 
 //--------------------------------------------------------------------------------------------------
@@ -47,14 +47,15 @@ void encerraAlocador()
     
     printf("Encerrando servidor...\n");
     
-    //TODO - IMPRIMIR DADOS DO ESTADO ATUAL DO PROGRAMA (LISTA DE PAGE_FAULTS E TABELA)
-    //PARA COELINHA
+    //Imprimimos os resultados e estado atual da tabela de frames
+    imprimeLista(_lista_resultados);
+    imprimeTabFrames(_tab_frames);
     
     //Esperamos o processo Substituidor de pag
     wait(&estado);
     
     //Liberamos a tabela de frames
-    removeTabFrames(_shmid, _tabFrames);
+    removeTabFrames(_shmid, _tab_frames);
     
     //Liberamos os semaforos
     removeConjSemaforo(_semid);
@@ -134,13 +135,13 @@ int rotinaAlocacaoPaginas(){
         if (msgrcv(_msg_aloc_id, msg, sizeof(Mensagem), 0, 0) < 0)
             return -1;
         
-        printf("\n\nALOCADOR: Recebi msg de %ld com pag %d.\n", msg->pid, msg->num);
+        //DEBUG: printf("\nP: %ld\t Pag %d.", msg->pid, msg->num);
         
         P(_semid, MUTEX); //Entra da secao critica
         
         //Verifica se a pagina i ja possui um page frame reservado
         //Se sim, nao ocorreu page fault
-        if (buscaPagina(_tabFrames, msg->num) >= 0){
+        if (buscaPagina(_tab_frames, msg->num) >= 0){
             
             //Notificamos o usuario
             Mensagem* resposta = inicializaMensagem();
@@ -151,11 +152,8 @@ int rotinaAlocacaoPaginas(){
         //Se nao, houve um page fault
         else {
             
-            //Incrementamos o numero de page faults na lista de resultados
-            incPageFault(&listaResultados, msg->pid);
-            
             //Verifica se o numero de paginas mapeadas atingiu MAX_OCUPACAO
-            if (_tabFrames->frames_ocupados >= MAX_OCUPACAO){
+            if (_tab_frames->frames_ocupados >= MAX_OCUPACAO){
                 
                 //Se sim,
                 V(_semid, SOLIC_LIB_PAG); //Solicita liberacao de paginas
@@ -168,14 +166,18 @@ int rotinaAlocacaoPaginas(){
             }
             
             //Uma frame livre eh escolhida aleatoriamente para mapear a pagina solicitada
-            alocaPagina(_tabFrames, msg->num);
+            alocaPagina(_tab_frames, msg->num);
             
             //Notificamos o usuario
             Mensagem* resposta = inicializaMensagem();
             resposta->pid = msg->pid;
             resposta->num = msg->num;
             msgsnd(_msg_user_id, resposta, sizeof(Mensagem), 0);
-            //TODO - SALVAR PAGE FAULTS EM UMA LISTA PARA FUTURA IMPRESSAO
+            
+            
+            //Incrementamos o numero de page faults na lista de resultados
+            incPageFault(&_lista_resultados, msg->pid);
+            //DEBUG: printf("\nPage Fault!");
         }
         
         V(_semid, MUTEX); //Sai da secao critica
@@ -186,7 +188,7 @@ int rotinaAlocacaoPaginas(){
 //--------------------------------------------------------------------------------------------------
 int servicoAlocacaoPaginas(TabFrames* tab_frames, int semid, int shmid){
     
-    _tabFrames = tab_frames;
+    _tab_frames = tab_frames;
     _semid = semid;
     _shmid = shmid;
     

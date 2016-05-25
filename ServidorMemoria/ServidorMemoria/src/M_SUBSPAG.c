@@ -56,7 +56,6 @@ void liberaPaginaMaisAntiga(TabFrames* tab_frames){
     }
 
     //Liberamos a pagina mais antiga e atualizams o numero de frames livres
-    printf("\n\nSUBSTITUIDOR: Substituindo pagina %d.\n", tab_frames->frames[older_frame].num_pag);
     tab_frames->frames[older_frame].num_pag = -1;
     tab_frames->frames[older_frame].tempo_ref = -1;
     tab_frames->frames_ocupados--;
@@ -74,7 +73,6 @@ int servicoSubstuicaoPaginas(TabFrames* tab_frames, int semid){
         
         tab_frames->num_exec_proc_subst++;
         
-        printf("\n\nSUBSTITUIDOR: Substituindo paginas!\n");
         //Executa o servico de substituicao de pagina
         while(tab_frames->frames_ocupados >= OCUPACAO_OK)
             liberaPaginaMaisAntiga(tab_frames);

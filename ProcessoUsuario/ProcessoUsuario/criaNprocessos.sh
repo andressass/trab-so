@@ -9,10 +9,17 @@
 
 # Ao alterar o valor de N, deve-se garantir a presenca dos arquivos
 # [pag_processo_0..pag_processo_N] na pasta docs
-N=4
+N=5
 
-for (( i=0; i < N; i++ ));
+#Numero de repeticoes
+Rep=1
+
+#Loop de execucao de processos
+for (( j=0; j < Rep; j++ ));
 do
-echo "output: $i"
-./procUsuario "$i" &
+    for (( i=0; i < N; i++ ));
+    do
+        echo "Executando Processo: $i"
+        ./procUsuario "$i" &
+    done
 done

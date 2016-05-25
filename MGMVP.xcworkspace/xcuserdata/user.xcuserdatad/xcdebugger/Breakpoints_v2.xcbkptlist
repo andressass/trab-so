@@ -42,27 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ServidorMemoria/ServidorMemoria/src/M_ALOCPAG.c"
-            timestampString = "485823272.849194"
+            timestampString = "485827530.313129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "rotinaAlocacaoPaginas()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ServidorMemoria/ServidorMemoria/src/M_ALOCPAG.c"
-            timestampString = "485823363.109184"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "servicoAlocacaoPaginas()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ServidorMemoria/ServidorMemoria/src/M_ALOCPAG.c"
-            timestampString = "485823443.605626"
+            timestampString = "485832836.091911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "rotinaAlocacaoPaginas()"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "encerraAlocador()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ServidorMemoria/ServidorMemoria/src/M_ALOCPAG.c"
-            timestampString = "485823535.112867"
+            timestampString = "485833013.043188"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "rotinaAlocacaoPaginas()"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,59 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ServidorMemoria/ServidorMemoria/src/M_ALOCPAG.c"
-            timestampString = "485823547.028571"
+            timestampString = "485833062.002043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "rotinaAlocacaoPaginas()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ServidorMemoria/ServidorMemoria/src/M_ALOCPAG.c"
-            timestampString = "485823548.626608"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "rotinaAlocacaoPaginas()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ServidorMemoria/ServidorMemoria/src/M_ALOCPAG.c"
-            timestampString = "485823670.95672"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
-            landmarkName = "servicoAlocacaoPaginas()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ServidorMemoria/ServidorMemoria/src/M_ALOCPAG.c"
-            timestampString = "485824047.23296"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "rotinaAlocacaoPaginas()"
             landmarkType = "7">
          </BreakpointContent>

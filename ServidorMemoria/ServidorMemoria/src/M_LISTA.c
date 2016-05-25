@@ -64,9 +64,9 @@ void imprimeLista(Lista* lista){
     //Percorre cada noh da lista
     while(lista_aux != NULL){
         
-        printf("/nNumero de page faults do processo %ld: %d", lista_aux->pid, lista_aux->page_faults);
+        printf("\nNumero de page faults do processo %ld: %d", lista_aux->pid, lista_aux->page_faults);
         
-        num_pf_total += lista->page_faults;
+        num_pf_total += lista_aux->page_faults;
         lista_aux = lista_aux->prox;
     }
     
