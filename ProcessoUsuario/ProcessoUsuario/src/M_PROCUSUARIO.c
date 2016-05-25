@@ -32,6 +32,36 @@ int msg_usu_id; //!< id das filas de mensagem de notificacao dos usuarios
 
 //--------------------------------------------------------------------------------------------------
 /*!
+ * Metodo responsavel por referenciar uma pagina na memoria
+ *
+ * \param i Numero da pagina
+ */
+void referencia_pagina(int i){
+    
+    Mensagem* m1 = inicializaMensagem();
+    
+    //Referencia pagina
+    m1->pid = getpid();
+    m1->num = i;
+    
+    //Envia mensagem para o servidor de memoria
+    if(msgsnd(msg_aloc_id, m1, sizeof(Mensagem), 0) < 0){
+        printf("Erro de envio mensagem\n\n");
+        exit(1);
+    }
+    
+    //Espera receber resposta do servidor de memoria
+    if(msgrcv(msg_usu_id, m1, sizeof(Mensagem), getpid(), 0) < 0){
+        printf("Erro de recebimento de mensagem\n\n");
+        exit(1);
+    }
+    
+    free(m1);
+}
+
+
+//--------------------------------------------------------------------------------------------------
+/*!
  * Metodo inicial do sistema
  *
  */
@@ -68,8 +98,6 @@ int main(int argc, const char * argv[])
     msg_aloc_id = msgget(KEY_T0, 0x1FF);
     msg_usu_id = msgget(KEY_T1, 0x1FF);
     
-    Mensagem* m1 = inicializaMensagem();
-    
     //Verificamos se houve erro na criacao das filas de mensagens
     if (msg_usu_id < 0 || msg_aloc_id < 0) {
         printf("Erro na obtencao das filas de mensagem. Servidor não encontrado!!!\n\n");
@@ -80,19 +108,8 @@ int main(int argc, const char * argv[])
         
         fscanf(fp, "%d", &pag_ref);
         
-        //Referencia pagina
-        printf("%d", pag_ref);
-        m1->pid = getpid();
-        m1->num = pag_ref;
-        
-        //Envia mensagem para o servidor de memoria
-        if(msgsnd(msg_aloc_id, m1, sizeof(Mensagem), 0) < 0)
-            printf("Erro de envio mensagem\n\n");
-        
-        //Espera receber resposta do servidor de memoria
-        if(msgrcv(msg_usu_id, m1, sizeof(Mensagem), getpid(), 0) < 0)
-            printf("Erro de recebimento de mensagem\n\n");
-        else printf("\n\nUSUARIO: Recebi mensagem!!\n\n");
+        //Referenciamos a pagina
+        referencia_pagina(pag_ref);
         
         //Para que o fim do arquivo seja encontrado
         fread(&char_aux, 1, 1, fp);
