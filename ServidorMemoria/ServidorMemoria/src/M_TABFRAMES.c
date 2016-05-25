@@ -54,9 +54,9 @@ void imprimeTabFrames(TabFrames* tabFrames){
     printf("\nNumero de execucoes do processo de substituicao: %d", tabFrames_aux->num_exec_proc_subst);
     
     printf("\n\nConfiguracao final da memoria:");
-    printf("\n--------------------------------");
+    printf("\n.-------------------------------.");
     printf("\n|Pagina\t|Tempo de Referencia\t|");
-    printf("\n--------------------------------");
+    printf("\n.-------------------------------.");
     for(int i = 0; i < NUMERO_FRAMES; i++) {
         if (tabFrames_aux->frames[i].num_pag < 0)
             printf("\n|Livre\t|--\t\t\t|");
@@ -65,6 +65,6 @@ void imprimeTabFrames(TabFrames* tabFrames){
             printf("\n|%d\t|%lu\t\t\t|", tabFrames_aux->frames[i].num_pag, tabFrames_aux->frames[i].tempo_ref);
     }
     
-    printf("\n--------------------------------\n\n");
+    printf("\n'-------------------------------'\n\n");
     
 }
