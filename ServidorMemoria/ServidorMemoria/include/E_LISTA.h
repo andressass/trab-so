@@ -17,6 +17,14 @@
 #endif
 
 
+#include <stdio.h>
+
+//--------------------------------------------------------------------------------------------------
+// Definicoes
+//--------------------------------------------------------------------------------------------------
+#define TAM_BUFFER_PID 30 //!< Numero total de processos de usuario
+#define TAM_STRING_LISTA 
+
 //--------------------------------------------------------------------------------------------------
 // Estruturas
 //--------------------------------------------------------------------------------------------------
@@ -65,10 +73,9 @@ EXT6 void incPageFault(Lista** lista, long pid);
  * Metodo responsavel por retornar um array de caracteres que representa a impressao dos dados 
  * contidos na lista.
  *
- * \param lista Lista a ser convertida
- * \return Array de caracteres que representa os dados de uma lista
+ * \param lista Lista a ser impressa
  */
-EXT6 char* ListaToString(Lista* lista);
+EXT6 void imprimeLista(Lista* lista);
 
 
 

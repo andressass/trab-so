@@ -19,7 +19,7 @@
 //--------------------------------------------------------------------------------------------------
 // Definicoes
 //--------------------------------------------------------------------------------------------------
-#define NPROC 10 //!< Numero total de processos de usuario
+#define TAM_NOME_ARQ 30 //!< Numero total de processos de usuario
 
 
 //--------------------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ int msg_usu_id; //!< id das filas de mensagem de notificacao dos usuarios
  */
 int main(int argc, const char * argv[])
 {
-    char nomeArquivo[24];
+    char nomeArquivo[TAM_NOME_ARQ];
     FILE* fp;
     int pag_ref_char, pag_ref_int;
     

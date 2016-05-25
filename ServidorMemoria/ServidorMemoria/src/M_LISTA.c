@@ -56,10 +56,21 @@ void incPageFault(Lista** lista, long pid){
 
 
 //--------------------------------------------------------------------------------------------------
-char* ListaToString(Lista* lista){
-    char* stringLista = "";
+void imprimeLista(Lista* lista){
+    int num_pf_total = 0;   //Numero de page faults totais
+    Lista* lista_aux;
     
-    //imprimimos a lista na string
+    lista_aux = lista;
     
-    return stringLista;
+    //Percorre cada noh da lista
+    while(lista_aux != NULL){
+        
+        printf("/nNumero de page faults do processo %ld: %d", lista_aux->pid, lista_aux->page_faults);
+        
+        num_pf_total += lista->page_faults;
+        lista_aux = lista_aux->prox;
+    }
+    
+    printf("\nNumero de page faults total: %d", num_pf_total);
+    
 }
