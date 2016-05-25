@@ -18,6 +18,18 @@
 
 #define M_SUBSPAG
 
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por encerrar o substituidor de paginas
+ */
+void encerraSubstituidor()
+{
+    exit(0);
+}
+
+
+
 //--------------------------------------------------------------------------------------------------
 /*!
  * Metodo responsavel por implementar os servicos relativos a liberacao da pagina com o tempo de
@@ -53,6 +65,7 @@ void liberaPaginaMaisAntiga(TabFrames* tab_frames){
 
 //--------------------------------------------------------------------------------------------------
 int servicoSubstuicaoPaginas(TabFrames* tab_frames, int semid){
+    signal(SIGUSR1, encerraSubstituidor);
     
     while (1) {
         

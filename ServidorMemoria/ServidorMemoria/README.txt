@@ -1,6 +1,6 @@
 #############################################################################
 # Servidor de Memoria Virtual
-# Aluno(s):	Andressa Sousa da Silveira 10/0053971
+# Alunos:	Andressa Sousa da Silveira 10/0053971
 #	     	Rondinele Barbosa Prado 10/0039880
 #	    
 #############################################################################

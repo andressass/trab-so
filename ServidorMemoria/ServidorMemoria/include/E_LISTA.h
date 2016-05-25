@@ -57,7 +57,7 @@ EXT6 Lista* inicializaNoLista(long pid);
  *
  * \return Estrutura de lista inicializada
  */
-EXT6 void incPageFault(Lista** lista, long pid);
+EXT6 void incPageFault(Lista** endereco_lista, long pid);
 
 
 //--------------------------------------------------------------------------------------------------

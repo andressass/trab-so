@@ -1,6 +1,6 @@
 #############################################################################
 # Processo de Usuario
-# Aluno(s):	Andressa Sousa da Silveira 10/0053971
+# Alunos:	Andressa Sousa da Silveira 10/0053971
 #	     	Rondinele Barbosa Prado 10/0039880
 #	    
 #############################################################################
@@ -18,6 +18,8 @@ Para compilar digite:
 Para executar digite:
 
 	$ ./procUsuario <N>
+	ou
+	$ ./bin/procUsuario <N>
 
 Para executar N processos digite:
 

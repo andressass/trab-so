@@ -22,22 +22,21 @@ Lista* inicializaNoLista(long pid){
     lista->prox = NULL;
     
     return lista;
-
 }
 
 
 //--------------------------------------------------------------------------------------------------
-void incPageFault(Lista** lista, long pid){
+void incPageFault(Lista** endereco_lista, long pid){
     
     //Se a lista estiver vazia, inicializamos um novo elemento e incrmentamos page faults
-    if (*lista == NULL){
-        *lista = inicializaNoLista(pid);
-        (*lista)->page_faults++;
+    if (*endereco_lista == NULL){
+        *endereco_lista = inicializaNoLista(pid);
+        (*endereco_lista)->page_faults++;
         return;
     }
     
     //Procuramos o elemento na lista
-    Lista* l = *lista;
+    Lista* l = *endereco_lista;
     do {
         if (l->pid == pid){ //Se encontrarmos o pid, incrementamos o numero de page faults
             l->page_faults++;

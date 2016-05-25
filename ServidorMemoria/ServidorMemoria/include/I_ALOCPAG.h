@@ -23,19 +23,17 @@
 #include "E_SEMAFORO.h"
 #include "E_LISTA.h"
 
-
 //--------------------------------------------------------------------------------------------------
 /*!
  * Metodo responsavel por implementar os servicos relativos ao processo de alocacao de paginas da
  * memoria. Ele espera uma solicitacao atraves de uma fila de mensagens e executa o servico 
  * solicitado.
- *
- * \param msg_aloc_id id da fila de mensagens de entrada do alocador
- * \param msg_subs_id id da fila de mensagens de entrada do substiuidor de paginas
+ 
  * \param tab_frames Tabela de frames
  * \param semid id do conjunto de semaforos a ser utlizado
+ * \param shmid id do da area de memoria compartilhada da tabela de frames
  * \return -1 se ocorreu erro
  */
-EXT1 int servicoAlocacaoPaginas(int msg_aloc_id, int msg_user_id, TabFrames* tab_frames, int semid);
+EXT1 int servicoAlocacaoPaginas(TabFrames* tab_frames, int semid, int shmid);
 
 #endif /* I_ALOCPAG_h */

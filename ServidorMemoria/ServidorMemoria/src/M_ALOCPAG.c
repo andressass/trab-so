@@ -20,6 +20,56 @@
 
 
 //--------------------------------------------------------------------------------------------------
+// Variaveis globais
+//--------------------------------------------------------------------------------------------------
+
+int _shmid; //!< id da area de memoria compartilhada da tabela de frames
+int _semid; //!< id do conjunto semaforos;
+
+int _msg_aloc_id; //!< id das filas de mensagem de entrada do alocador
+int _msg_user_id; //!< id das filas de mensagem de notificacao dos usuarios
+
+TabFrames* _tabFrames; //!< ponteiro para a tabela de frames
+Lista* listaResultados; //!< ponteiro a para lista que armazena o numero de page faults por pid
+
+
+//--------------------------------------------------------------------------------------------------
+// Metodos
+//--------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por encerrar o alocador de paginas
+ */
+void encerraAlocador()
+{
+    int estado; //Estado de encerramento do processo filho
+    
+    printf("Encerrando servidor...\n");
+    
+    //TODO - IMPRIMIR DADOS DO ESTADO ATUAL DO PROGRAMA (LISTA DE PAGE_FAULTS E TABELA)
+    //PARA COELINHA
+    
+    //Esperamos o processo Substituidor de pag
+    wait(&estado);
+    
+    //Liberamos a tabela de frames
+    removeTabFrames(_shmid, _tabFrames);
+    
+    //Liberamos os semaforos
+    removeConjSemaforo(_semid);
+    
+    //Liberamos a fila de mensagens
+    msgctl(_msg_user_id, IPC_RMID, 0);
+    msgctl(_msg_aloc_id, IPC_RMID, 0);
+    
+    //Encerramos o processo atual
+    exit(0);
+}
+
+
+
+//--------------------------------------------------------------------------------------------------
 /*!
  * Metodo responsavel por implementar os servicos relativos a busca de paginas em uma tabela de
  * frames
@@ -68,58 +118,95 @@ int alocaPagina(TabFrames* tab_frames, int pag_num){
 
 
 //--------------------------------------------------------------------------------------------------
-int servicoAlocacaoPaginas(int msg_aloc_id, int msg_user_id, TabFrames* tab_frames, int semid){
-    Mensagem* msg;  
+/*!
+ * Metodo responsavel por implementar o loop principal com as funcionalidades do alocador de paginas
+ *
+ * \return  -1, se ocorreu erro;
+ */
+int rotinaAlocacaoPaginas(){
+    //Inicializamos a estrutura que receberah as mensagens
+    Mensagem* msg = inicializaMensagem();
     
-    
-    V(semid, MUTEX); //Setamos mutex = 1
+    V(_semid, MUTEX); //Setamos mutex = 1
     
     while (1) {
         //Recebe mensagem (ou aguarda até receber)
-        if (msgrcv(msg_aloc_id, msg, sizeof(Mensagem), 0, 0) < 0)
+        if (msgrcv(_msg_aloc_id, msg, sizeof(Mensagem), 0, 0) < 0)
             return -1;
         
         printf("\n\nALOCADOR: Recebi msg de %ld com pag %d.\n", msg->pid, msg->num);
         
-        P(semid, MUTEX); //Entra da secao critica
+        P(_semid, MUTEX); //Entra da secao critica
         
         //Verifica se a pagina i ja possui um page frame reservado
         //Se sim, nao ocorreu page fault
-        if (buscaPagina(tab_frames, msg->num) >= 0){
+        if (buscaPagina(_tabFrames, msg->num) >= 0){
             
             //Notificamos o usuario
             Mensagem* resposta = inicializaMensagem();
             resposta->pid = msg->pid;
             resposta->num = msg->num;
-            msgsnd(msg_user_id, resposta, sizeof(Mensagem), 0);
+            msgsnd(_msg_user_id, resposta, sizeof(Mensagem), 0);
         }
         //Se nao, houve um page fault
         else {
-        
+            
+            //Incrementamos o numero de page faults na lista de resultados
+            incPageFault(&listaResultados, msg->pid);
+            
             //Verifica se o numero de paginas mapeadas atingiu MAX_OCUPACAO
-            if (tab_frames->frames_ocupados >= MAX_OCUPACAO){
+            if (_tabFrames->frames_ocupados >= MAX_OCUPACAO){
                 
                 //Se sim,
-                V(semid, SOLIC_LIB_PAG); //Solicita liberacao de paginas
+                V(_semid, SOLIC_LIB_PAG); //Solicita liberacao de paginas
                 
-                V(semid, MUTEX); //Sai da secao critica
+                V(_semid, MUTEX); //Sai da secao critica
                 
-                P(semid, RESP_LIB_PAG); //Espera resposta do substituidor de paginas
+                P(_semid, RESP_LIB_PAG); //Espera resposta do substituidor de paginas
                 
-                P(semid, MUTEX); //Entra da secao critica
+                P(_semid, MUTEX); //Entra da secao critica
             }
             
             //Uma frame livre eh escolhida aleatoriamente para mapear a pagina solicitada
-           alocaPagina(tab_frames, msg->num);
+            alocaPagina(_tabFrames, msg->num);
             
             //Notificamos o usuario
             Mensagem* resposta = inicializaMensagem();
             resposta->pid = msg->pid;
             resposta->num = msg->num;
-            msgsnd(msg_user_id, resposta, sizeof(Mensagem), 0);
+            msgsnd(_msg_user_id, resposta, sizeof(Mensagem), 0);
             //TODO - SALVAR PAGE FAULTS EM UMA LISTA PARA FUTURA IMPRESSAO
         }
         
-        V(semid, MUTEX); //Sai da secao critica
+        V(_semid, MUTEX); //Sai da secao critica
     }
+}
+
+
+//--------------------------------------------------------------------------------------------------
+int servicoAlocacaoPaginas(TabFrames* tab_frames, int semid, int shmid){
+    
+    _tabFrames = tab_frames;
+    _semid = semid;
+    _shmid = shmid;
+    
+    //Se receber a notificacao de encerramento, desviamos para a rotina de termino.
+    signal(SIGUSR1, encerraAlocador);
+    
+    //Criacao das filas de mensagens dos processos de alocacao e substituicao de paginas
+    _msg_aloc_id = msgget(KEY_T0, IPC_CREAT | 0x1FF);
+    _msg_user_id = msgget(KEY_T1, IPC_CREAT | 0x1FF);
+    
+    //Verificamos se houve erro na criacao das filas de mensagens
+    if (_msg_user_id < 0 || _msg_aloc_id < 0) {
+        printf("Erro na criacao de filas de mensagem. Encerrando servidor...\n");
+        exit(1);
+    }
+    
+    //Chamamos a rotina de alocacao de paginas
+    rotinaAlocacaoPaginas();
+    
+    encerraAlocador();
+    
+    return -1;
 }
