@@ -72,6 +72,8 @@ int servicoSubstuicaoPaginas(TabFrames* tab_frames, int semid){
         P(semid, SOLIC_LIB_PAG); //Espera solicitacao de substituicao de paginas
         P(semid, MUTEX); //Entra da secao critica
         
+        tab_frames->num_exec_proc_subst++;
+        
         printf("\n\nSUBSTITUIDOR: Substituindo paginas!\n");
         //Executa o servico de substituicao de pagina
         while(tab_frames->frames_ocupados >= OCUPACAO_OK)

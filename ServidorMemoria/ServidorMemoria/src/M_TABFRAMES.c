@@ -32,6 +32,7 @@ int inicializaTabFrames(key_t chave, TabFrames** tabFrames){
     }
     
     (*tabFrames)->frames_ocupados = 0;
+    (*tabFrames)->num_exec_proc_subst = 0;
     
     return idshm;
 }
@@ -42,4 +43,21 @@ int removeTabFrames(int shmid, TabFrames* tabFrames){
     if (shmdt(tabFrames) < 0) return -1;
     
     return shmctl(shmid, IPC_RMID, 0);
+}
+
+//--------------------------------------------------------------------------------------------------
+void imprimeTabFrames(TabFrames* tabFrames){
+    TabFrames *tabFrames_aux;
+    
+    tabFrames_aux = tabFrames;
+
+    printf("\nNumero de execucoes do processo de substituicao: %d", tabFrames_aux->num_exec_proc_subst);
+    
+    printf("\n\nConfiguracao final da memoria:");
+    printf("\nPagina\t|Tempo de Referencia");
+    
+    for(i = 0; i < NUMERO_FRAMES; i++) {
+        printf("\n%d\t|%lf", tabFrames_aux->frames[i].num_pag, tabFrames_aux->frames[i].tempo_ref);
+    }
+    
 }

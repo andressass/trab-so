@@ -18,6 +18,7 @@
 
 
 #include <stdlib.h>
+#include <stdint.h>
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
@@ -53,6 +54,7 @@ typedef struct frame{
 typedef struct tabelaFrames{
     Frame frames[NUMERO_FRAMES];
     int frames_ocupados;
+    int num_exec_proc_subst;
 } TabFrames;
 
 
@@ -80,6 +82,15 @@ EXT4 int inicializaTabFrames(int chave, TabFrames** tabFrames);
  * \return 0, em caso de sucesso, -1, em caso de erro
  */
 EXT4 int removeTabFrames(int shmid, TabFrames* tabFrames);
+
+//--------------------------------------------------------------------------------------------------
+/*!
+ * Metodo responsavel por retornar um array de caracteres que representa a impressao dos dados
+ * contidos na tabela de frames.
+ *
+ * \param tabFrames TabFrames a ser impressa
+ */
+EXT4 void imprimeTabFrames(TabFrames* tabFrames);
 
 
 #endif /* E_TABFRAMES_h */
