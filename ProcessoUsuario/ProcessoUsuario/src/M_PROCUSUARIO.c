@@ -39,7 +39,9 @@ int main(int argc, const char * argv[])
 {
     char nomeArquivo[TAM_NOME_ARQ];
     FILE* fp;
-    int pag_ref_char, pag_ref_int;
+    int pag_ref; //Pagina a ser referenciada
+    char char_aux;
+
     
     if(argc != 2) {
         printf("Você esqueceu de colocar o numero do processo!!!\n\n");
@@ -74,26 +76,26 @@ int main(int argc, const char * argv[])
         exit(1);
     }
     
-    //Obtem o primeiro caracter do arquivo
-    pag_ref_char = getc(fp);
-    while(pag_ref_char != EOF) { //Enquanto o arquivo nao chega no fim
-        if (pag_ref_char != ',' && pag_ref_char != '\n') { //Se o caracter nao for uma virgula nem um enter
-            //Converte o caracter obtido do arquivo para inteiro
-            pag_ref_int = pag_ref_char - '0';
-            //Referencia pagina
-            m1->pid = getpid();
-            m1->num = pag_ref_int;
-            if(msgsnd(msg_aloc_id, m1, sizeof(Mensagem), 0) < 0){
-                printf("Erro de envio mensagem\n\n");
-                exit(1);
-            }
-            
-            if(msgrcv(msg_usu_id, m1, sizeof(Mensagem), getpid(), 0) < 0){
-                printf("Erro de recebimento de mensagem\n\n");
-                exit(1);
-            }
-        }
-        pag_ref_char = getc(fp);
+    while(!feof(fp)){//Enquanto o arquivo nao chega no fim
+        
+        fscanf(fp, "%d", &pag_ref);
+        
+        //Referencia pagina
+        printf("%d", pag_ref);
+        m1->pid = getpid();
+        m1->num = pag_ref;
+        
+        //Envia mensagem para o servidor de memoria
+        if(msgsnd(msg_aloc_id, m1, sizeof(Mensagem), 0) < 0)
+            printf("Erro de envio mensagem\n\n");
+        
+        //Espera receber resposta do servidor de memoria
+        if(msgrcv(msg_usu_id, m1, sizeof(Mensagem), getpid(), 0) < 0)
+            printf("Erro de recebimento de mensagem\n\n");
+        else printf("\n\nUSUARIO: Recebi mensagem!!\n\n");
+        
+        //Para que o fim do arquivo seja encontrado
+        fread(&char_aux, 1, 1, fp);
     }
     
     fclose(fp);
