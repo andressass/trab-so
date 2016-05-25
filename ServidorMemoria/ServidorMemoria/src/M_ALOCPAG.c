@@ -135,7 +135,7 @@ int rotinaAlocacaoPaginas(){
         if (msgrcv(_msg_aloc_id, msg, sizeof(Mensagem), 0, 0) < 0)
             return -1;
         
-        printf("\nP: %ld\t Pag %d.", msg->pid, msg->num);
+        //DEBUG: printf("\nP: %ld\t Pag %d.", msg->pid, msg->num);
         
         P(_semid, MUTEX); //Entra da secao critica
         
@@ -177,7 +177,7 @@ int rotinaAlocacaoPaginas(){
             
             //Incrementamos o numero de page faults na lista de resultados
             incPageFault(&_lista_resultados, msg->pid);
-            printf("\nPage Fault!");
+            //DEBUG: printf("\nPage Fault!");
         }
         
         V(_semid, MUTEX); //Sai da secao critica
